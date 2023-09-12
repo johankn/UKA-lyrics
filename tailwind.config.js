@@ -15,7 +15,8 @@ module.exports = {
           'pink': '#FF809F',
           'green': '#4EB4A0',
           'background': '#FFFDF0',
-          'white': '#FFFFFF'
+          'white': '#FFFFFF',
+          'black': '#FFFFFF',
         },
         fontFamily: {
           'original-surfer': '@apply font-original-surfer',

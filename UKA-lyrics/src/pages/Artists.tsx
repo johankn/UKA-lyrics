@@ -6,7 +6,7 @@ function Artists () {
       <div className="max-w-md mx-auto pt-12 px-10 pb-4 bg-background h-full w-full">
       <button
         onClick={() => {
-          window.location.href= "Homepage.html";
+          window.location.href= "/HomePage.tsx";
         }}
         >
         <img src="./tilbakeKnapp.png" className="h-12 pb-1"></img>

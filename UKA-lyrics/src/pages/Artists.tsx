@@ -1,55 +1,62 @@
 function Artists () {
   return (
-    <div className="pb-32 mt-10 bg-background">
-      {/* <img src="./uka_bakgrunn.png" className="h-80"></img> */}
-      <div className="max-w-md mx-auto pt-5 px-4 pb-4 bg-background h-full w-full">
-        
+    <div className="pb-32 bg-background">
+  
+
+      <div className="max-w-md mx-auto pt-12 px-10 pb-4 bg-background h-full w-full">
+      <button
+        onClick={() => {
+          window.location.href= "Homepage.html";
+        }}
+        >
+        <img src="./tilbakeKnapp.png" className="h-12 pb-1"></img>
+      </button>
         <button
           onClick={() => {
-            window.location.href = "/opprett-gruppe";
+            window.location.href = "/50CentPage";
           }}
-          className="bg-pink hover:bg-darksalmon duration-200 mb-4 text-white text-md text-left rounded-2xl w-full p-1 py-5 inline-flex items-center drop-shadow-box">
-          <span className=" pl-5 text-xl">50 Cent</span>
+          className="bg-pink hover:bg-darksalmon duration-200 mb-8 mt-6 text-darkblue text-md text-left rounded-2xl w-full p-1 py-5 inline-flex items-center drop-shadow-box">
+          <span className="mx-auto text-xl">50 Cent</span>
         </button>
 
         <button
           onClick={() => {
-            window.location.href = "/opprett-gruppe";
+            window.location.href = "/cezinandoPage";
           }}
-          className="bg-green hover:bg-darksalmon duration-200 mb-4 text-white text-md text-left rounded-2xl w-full p-1 py-5 inline-flex items-center drop-shadow-box">
-          <span className=" pl-5 text-xl">Cezinando</span>
+          className="bg-green hover:bg-darksalmon duration-200 mb-8 text-darkblue text-md text-left rounded-2xl w-full p-1 py-5 inline-flex items-center drop-shadow-box">
+          <span className="mx-auto text-xl">Cezinando</span>
         </button>
 
         <button
           onClick={() => {
-            window.location.href = "/opprett-gruppe";
+            window.location.href = "/arifPage";
           }}
-          className="bg-pink hover:bg-darksalmon duration-200 mb-4 text-white text-md text-left rounded-2xl w-full p-1 py-5 inline-flex items-center drop-shadow-box">
-          <span className=" pl-5 text-xl">Arif</span>
+          className="bg-pink hover:bg-darksalmon duration-200 mb-8 text-darkblue text-md text-left rounded-2xl w-full p-1 py-5 inline-flex items-center drop-shadow-box">
+          <span className="mx-auto text-xl">Arif</span>
         </button>
 
         <button
           onClick={() => {
-            window.location.href = "/opprett-gruppe";
+            window.location.href = "/astridSPage";
           }}
-          className="bg-green hover:bg-darksalmon duration-200 mb-4 text-white text-md text-center rounded-2xl w-full p-1 py-5 inline-flex items-center drop-shadow-box">
-          <span className=" pl-5 text-xl">Astrid S</span>
+          className="bg-green hover:bg-darksalmon duration-200 mb-8 text-darkblue text-md text-center rounded-2xl w-full p-1 py-5 inline-flex items-center drop-shadow-box">
+          <span className="mx-auto text-xl">Astrid S</span>
         </button>
 
         <button
           onClick={() => {
-            window.location.href = "/opprett-gruppe";
+            window.location.href = "/rubenPage";
           }}
-          className="bg-pink hover:bg-darksalmon duration-200 mb-4 text-white text-md text-center rounded-2xl w-full p-1 py-5 inline-flex items-center drop-shadow-box">
-          <span className=" pl-5 text-xl">Ruben</span>
+          className="bg-pink hover:bg-darksalmon duration-200 mb-8 text-darkblue text-md text-center rounded-2xl w-full p-1 py-5 inline-flex items-center drop-shadow-box">
+          <span className="mx-auto text-xl">Ruben</span>
         </button>
 
         <button
           onClick={() => {
-            window.location.href = "/opprett-gruppe";
+            window.location.href = "/ramonPage";
           }}
-          className="bg-green hover:bg-darksalmon duration-200 mb-4 text-white text-md text-center rounded-2xl w-full p-1 py-5 inline-flex items-center drop-shadow-box">
-          <span className="text-xl">Ramon</span>
+          className="bg-green hover:bg-darksalmon duration-200 mb-4 text-darkblue text-md text-center rounded-2xl w-full p-1 py-5 inline-flex items-center drop-shadow-box">
+          <span className="text-xl mx-auto">Ramon</span>
         </button>
  
 

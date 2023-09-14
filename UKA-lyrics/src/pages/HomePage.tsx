@@ -1,9 +1,6 @@
 import './HomePage.css'
 import '../App.css'
 import '../index.css'
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import { Link, useHistory } from 'react-router-dom';
 
 
 function HomePage () {

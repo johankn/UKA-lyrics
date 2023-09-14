@@ -1,4 +1,4 @@
-function Artists () {
+function Artists() {
   return <h1>Favourites Page</h1>;
 }
 

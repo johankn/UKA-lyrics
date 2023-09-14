@@ -1,3 +1,4 @@
+import BurgerMenu from "../assets/BurgerMenu";
 import { useNavigate } from "react-router-dom";
 
 function Favourites () {
@@ -5,6 +6,7 @@ function Favourites () {
   localStorage.setItem("Sandy Shop", "200000")
   return (
     <>
+      <BurgerMenu />
       <h1>Favourites</h1>
       <FavouriteCards></FavouriteCards>
     </>

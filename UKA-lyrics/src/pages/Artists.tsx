@@ -4,43 +4,79 @@ import '../App.css'
 import '../index.css'
 import './Artists.css'
 
-function Artists () {
 
+function Artists() {
   return (
     <>
     <BurgerMenu />
       <div className="mainDiv">
-      <div className='tilbakeKnapp'>
-    <button className="tilbakeKnapp">
-        <img
-            src="../public/tilbakeKnapp.png"
-            alt="Tilbake button"
-            onClick={() => {
+        <div className="tilbakeKnapp">
+          <button className="tilbakeKnapp">
+            <img
+              src="../public/tilbakeKnapp.png"
+              alt="Tilbake button"
+              onClick={() => {
                 window.location.href = "HomePage.tsx"; // Update the URL to your desired location
-            }}
-        />
-    </button>
-</div>
+              }}
+            />
+          </button>
+        </div>
 
-<div className="artists ">
-<div className="pinkArtistbutton">
-          <button onClick={event =>  window.location.href='/artistsongs/3q7HBObVc0L8jNeTe5Gofh'}>50 cent</button>
-        </div>
-        <div className="greenArtistbutton">
-          <button onClick={event =>  window.location.href='/artistssongs/504cl42JQLRqlZddfZ3S4z'}>Cezinando</button>
-        </div>
-        <div className="pinkArtistbutton">
-          <button onClick={event =>  window.location.href='/artistssongs/46pSx5MtwhorubZuHbwM0Q'}>Arif</button>
-        </div>
-        <div className="greenArtistbutton">
-          <button onClick={event =>  window.location.href='/artistssongs/3AVfmawzu83sp94QW7CEGm'}>Astrid S</button>
-        </div>
-        <div className="pinkArtistbutton">
-          <button onClick={event =>  window.location.href='/artistssongs/0x3PXj1WnuW7YsBxQK57xM'}>Ruben</button>
-        </div>
-        <div className="greenArtistbutton">
-          <button onClick={event =>  window.location.href='/artistssongs/5r6ViSL3nacDRVBtnXlixL'}>Ramon</button>
-        </div>
+        <div className="artists ">
+          <div className="pinkArtistbutton">
+            <button
+              onClick={(event) =>
+                (window.location.href = "/artistsongs/3q7HBObVc0L8jNeTe5Gofh")
+              }
+            >
+              50 cent
+            </button>
+          </div>
+          <div className="greenArtistbutton">
+            <button
+              onClick={(event) =>
+                (window.location.href = "/artistssongs/504cl42JQLRqlZddfZ3S4z")
+              }
+            >
+              Cezinando
+            </button>
+          </div>
+          <div className="pinkArtistbutton">
+            <button
+              onClick={(event) =>
+                (window.location.href = "/artistssongs/46pSx5MtwhorubZuHbwM0Q")
+              }
+            >
+              Arif
+            </button>
+          </div>
+          <div className="greenArtistbutton">
+            <button
+              onClick={(event) =>
+                (window.location.href = "/artistssongs/3AVfmawzu83sp94QW7CEGm")
+              }
+            >
+              Astrid S
+            </button>
+          </div>
+          <div className="pinkArtistbutton">
+            <button
+              onClick={(event) =>
+                (window.location.href = "/artistssongs/0x3PXj1WnuW7YsBxQK57xM")
+              }
+            >
+              Ruben
+            </button>
+          </div>
+          <div className="greenArtistbutton">
+            <button
+              onClick={(event) =>
+                (window.location.href = "/artistssongs/5r6ViSL3nacDRVBtnXlixL")
+              }
+            >
+              Ramon
+            </button>
+          </div>
         </div>
       </div>
     </>
@@ -48,7 +84,6 @@ function Artists () {
 }
 //   return (
 //     <div className="pb-32 bg-background">
-  
 
 //       <div className="max-w-md mx-auto pt-12 px-10 pb-4 bg-background h-full w-full">
 //       <button
@@ -105,9 +140,7 @@ function Artists () {
 //           className="bg-green hover:bg-darksalmon duration-200 mb-4 text-darkblue text-md text-center rounded-2xl w-full p-1 py-5 inline-flex items-center drop-shadow-box">
 //           <span className="text-xl mx-auto">Ramon</span>
 //         </button>
- 
 
-       
 //       </div>
 //     </div>
 //   );

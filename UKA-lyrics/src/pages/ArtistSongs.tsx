@@ -1,4 +1,3 @@
-
 import { QueryClient, QueryClientProvider } from "react-query";
 import ArtistCard from "../components/ArtistCard";
 import { useParams } from "react-router-dom";

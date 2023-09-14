@@ -2,8 +2,6 @@ import BurgerMenu from "../assets/BurgerMenu";
 import { useNavigate } from "react-router-dom";
 
 function Favourites () {
-  localStorage.setItem("Candy Shop", "100000")  
-  localStorage.setItem("Sandy Shop", "200000")
   return (
     <>
       <BurgerMenu />
@@ -32,17 +30,15 @@ console.log(favourites)
   );
 }
 
-type FavouriteCardProps = {
+type FavouriteCardProps = { // må oppdateres basert på hva som ligger i localstorage
   song: string;
   trackId: string;
 };
 
 
 function FavouriteCard ({song, trackId}: FavouriteCardProps) { //TODO: Legge til styling. Må sende med trackId så man routes rett til riktig sang.
-  const navigate = useNavigate();
-
   function handleClick() {
-    navigate("/artistSongs/" + trackId);
+    // må finne ut hva som skjer her, navigere til artistSongs/trackId eller legge inn linken direkte?
   }
   return (
     <div className="btn">

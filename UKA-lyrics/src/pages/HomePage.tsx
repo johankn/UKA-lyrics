@@ -1,10 +1,7 @@
 import './HomePage.css'
 import '../App.css'
 import '../index.css'
-<<<<<<< HEAD
-=======
 import BurgerMenu from '../assets/BurgerMenu';
->>>>>>> 1f0c0db (Adjusted the h1 size to scale based on the vp. Added the basic functionalities of a burger menu.)
 
 
 function HomePage () {

@@ -4,7 +4,7 @@ import "../App.css";
 import "../index.css";
 import "./Artists.css";
 import {useNavigate} from "react-router-dom";
-import GoBackButton from "../assets/goBackButton";
+import GoBackButton from "../assets/GoBackButton";
 
 function Artists() {
 

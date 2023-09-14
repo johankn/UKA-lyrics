@@ -2,7 +2,7 @@ import { QueryClient, QueryClientProvider } from "react-query";
 import ArtistCard from "../components/ArtistCard";
 import { useParams } from "react-router-dom";
 import "../index.css";
-import GoBackButton from "../assets/goBackButton";
+import GoBackButton from "../assets/GoBackButton";
 
 function ArtistSongs() {
   const { artistID } = useParams<{ artistID: string }>();

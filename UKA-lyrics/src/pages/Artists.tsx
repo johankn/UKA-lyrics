@@ -1,5 +1,8 @@
 function Artists () {
-  return <h1>Artists Page</h1>;
+  return (
+    <div className="w-15 h-100 bg-pink">
+    </div>
+  )
 }
 
 export default Artists;

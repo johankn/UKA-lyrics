@@ -1,3 +1,12 @@
 .btn {
     padding: 1em;
   }
+
+  @media only screen and (min-width: 768px) {
+
+    h1 {
+      font-size: 1vw;
+      line-height: 0.6;
+      color: #242424;
+    }
+  }

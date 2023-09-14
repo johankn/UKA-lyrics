@@ -7,11 +7,6 @@ import "./Favourites.css";
 import "./HomePage.css";
 
 function Favourites () {
-  window.localStorage.setItem("hei", "heihei")
-  window.localStorage.setItem("heii", "heihei")
-  window.localStorage.setItem("heiii", "heihei")
-  window.localStorage.setItem("heiiii", "heihei")
-  window.localStorage.setItem("heiiiii", "heihei")
   var favourites = new Array;
   for(var i=0, len=localStorage.length; i<len; i++) {
     var key = localStorage.key(i);

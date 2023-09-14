@@ -1,10 +1,8 @@
 .wrapper {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 15px;
-
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
 }
-
 
 .pinkArtistbutton {
   background-color: #ff809f;
@@ -47,5 +45,3 @@
   height: 50px;
   cursor: pointer; /* Add a pointer cursor to indicate it's clickable */
 }
-
-

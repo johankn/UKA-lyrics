@@ -1,12 +1,12 @@
-import BurgerMenu from '../assets/BurgerMenu';
+import BurgerMenu from "../assets/BurgerMenu";
 
-function Artists () {
+function Artists() {
   return (
     <>
-      <BurgerMenu/>
+      <BurgerMenu />
       <h1>Favourites Page</h1>;
     </>
-  )
+  );
 }
 
 export default Artists;

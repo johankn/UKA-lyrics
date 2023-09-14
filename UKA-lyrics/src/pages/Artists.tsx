@@ -1,30 +1,29 @@
 import BurgerMenu from "../assets/BurgerMenu";
-import './HomePage.css'
-import '../App.css'
-import '../index.css'
-import './Artists.css'
-
+import "./HomePage.css";
+import "../App.css";
+import "../index.css";
+import "./Artists.css";
 
 function Artists() {
   return (
     <>
-    <BurgerMenu />
+      <BurgerMenu />
       <div className="mainDiv">
         <div className="wrapper">
-        <div className="tilbakeKnapp">
+          <div className="tilbakeKnapp">
             <img
-              src="../public/tilbakeKnapp.png"
+              src="/tilbakeKnapp.png"
               alt="Tilbake button"
               onClick={() => {
-                window.location.href = "/"; // Update the URL to your desired location
+                window.location.href = "/";
               }}
             />
-        </div>
+          </div>
         </div>
         <div className="artists">
           <div className="pinkArtistbutton">
             <button
-              onClick={(event) =>
+              onClick={() =>
                 (window.location.href = "/artistsongs/3q7HBObVc0L8jNeTe5Gofh")
               }
             >
@@ -33,7 +32,7 @@ function Artists() {
           </div>
           <div className="greenArtistbutton">
             <button
-              onClick={(event) =>
+              onClick={() =>
                 (window.location.href = "/artistsongs/504cl42JQLRqlZddfZ3S4z")
               }
             >
@@ -42,7 +41,7 @@ function Artists() {
           </div>
           <div className="pinkArtistbutton">
             <button
-              onClick={(event) =>
+              onClick={() =>
                 (window.location.href = "/artistsongs/46pSx5MtwhorubZuHbwM0Q")
               }
             >
@@ -51,7 +50,7 @@ function Artists() {
           </div>
           <div className="greenArtistbutton">
             <button
-              onClick={(event) =>
+              onClick={() =>
                 (window.location.href = "/artistsongs/3AVfmawzu83sp94QW7CEGm")
               }
             >
@@ -60,7 +59,7 @@ function Artists() {
           </div>
           <div className="pinkArtistbutton">
             <button
-              onClick={(event) =>
+              onClick={() =>
                 (window.location.href = "/artistsongs/0x3PXj1WnuW7YsBxQK57xM")
               }
             >
@@ -69,8 +68,8 @@ function Artists() {
           </div>
           <div className="greenArtistbutton">
             <button
-              onClick={(event) =>
-                (window.location.href = "/artistssongs/5r6ViSL3nacDRVBtnXlixL")
+              onClick={() =>
+                (window.location.href = "/artistsongs/5r6ViSL3nacDRVBtnXlixL")
               }
             >
               Ramon
@@ -81,6 +80,5 @@ function Artists() {
     </>
   );
 }
-
 
 export default Artists;

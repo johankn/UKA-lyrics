@@ -1,17 +1,10 @@
 import BurgerMenu from "../assets/BurgerMenu";
-import { useNavigate } from "react-router-dom";
+import FavouriteCard from "../components/FavouriteCard";
+import "../App.css";
+import "../index.css";
+import "./Favourites.css";
 
 function Favourites () {
-  return (
-    <>
-      <BurgerMenu />
-      <h1>Favourites</h1>
-      <FavouriteCards></FavouriteCards>
-    </>
-  );
-}
-
-function FavouriteCards () {
   var favourites = new Array;
   for(var i=0, len=localStorage.length; i<len; i++) {
     var key = localStorage.key(i);
@@ -20,32 +13,21 @@ function FavouriteCards () {
       favourites.push([key, value]);
     }
 }
-console.log(favourites)
   return (
-    <ul>
-        {favourites.map((favourite) => (
-            <FavouriteCard key={favourite[1]} song={favourite[0]} trackId={favourite[1]}></FavouriteCard>
-        ))}
-    </ul>
+    <>
+      <BurgerMenu />
+      <div className="main">
+        <h1>Dine favoritter</h1>
+        <div className="favourites">
+          {favourites.map((favourite, index) => (
+            <div className={index % 2 === 0 ? 'pinkFavouritebutton' : 'greenFavouritebutton'}>
+              <FavouriteCard key={index} song={favourite[0]} trackId={favourite[1]}></FavouriteCard>
+            </div>
+          ))}
+        </div>
+      </div>
+    </>
   );
-}
-
-type FavouriteCardProps = { // må oppdateres basert på hva som ligger i localstorage
-  song: string;
-  trackId: string;
-};
-
-
-function FavouriteCard ({song, trackId}: FavouriteCardProps) { //TODO: Legge til styling. Må sende med trackId så man routes rett til riktig sang.
-  function handleClick() {
-    // må finne ut hva som skjer her, navigere til artistSongs/trackId eller legge inn linken direkte?
-  }
-  return (
-    <div className="btn">
-          <button onClick={handleClick}>{song}{trackId}</button>
-    </div>
-  
-  )
 }
 
 export default Favourites;

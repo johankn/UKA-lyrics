@@ -1,12 +1,15 @@
 import { QueryClient, QueryClientProvider } from "react-query";
 import ArtistCard from "../components/ArtistCard";
+import { useParams } from "react-router-dom";
 
-interface ArtistSongsProps {
-  artistID: string;
-}
+function ArtistSongs() {
+  const { artistID } = useParams<{ artistID: string }>();
 
-function ArtistSongs({ artistID }: ArtistSongsProps) {
   const queryClient = new QueryClient();
+
+  if (!artistID) {
+    return <div>Artist ID is missing!</div>;
+  }
 
   return (
     <QueryClientProvider client={queryClient}>

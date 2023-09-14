@@ -21,8 +21,8 @@ const router = createBrowserRouter([
     element: <Artists />,
   },
   {
-    path: "artistsongs",
-    element: <ArtistSongs artistID = {'3q7HBObVc0L8jNeTe5Gofh'} />,
+    path: "artistsongs/:artistID",
+    element: <ArtistSongs />,
   },
   {
     path: "favourites",

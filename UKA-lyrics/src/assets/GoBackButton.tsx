@@ -1,7 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import "./GoBackButton.css";
-import { MdArrowBack } from "react-icons/md"; // Import the Material Icons
 
 const GoBackButton = () => {
   const navigate = useNavigate();
@@ -9,10 +8,12 @@ const GoBackButton = () => {
   return (
     <div className="goBackButton">
       <button onClick={() => navigate(-1)}>
-        <MdArrowBack />
+        {/* Use your custom arrow icon */}
+        <span className="custom-arrow-icon">←</span>
       </button>
     </div>
   );
 };
 
 export default GoBackButton;
+

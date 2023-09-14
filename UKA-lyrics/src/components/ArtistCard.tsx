@@ -34,7 +34,7 @@ const ArtistCard = ({ artistID }: ArtistCardProps) => {
   const { data: topSongs, isLoading } = useQuery<Song[], Error>(
     ["artistTopSongs", artistID, accessToken],
     () => getTopSongsOfArtist(artistID, accessToken!),
-    { enabled: !!accessToken }
+    { enabled: !!accessToken },
   );
 
   if (isLoading || !topSongs) return <div>Loading...</div>;

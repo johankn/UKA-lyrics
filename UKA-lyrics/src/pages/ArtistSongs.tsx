@@ -1,8 +1,7 @@
 import { QueryClient, QueryClientProvider } from "react-query";
 import ArtistCard from "../components/ArtistCard";
 import { useParams } from "react-router-dom";
-import '../index.css';
-
+import "../index.css";
 
 function ArtistSongs() {
   const { artistID } = useParams<{ artistID: string }>();
@@ -15,8 +14,8 @@ function ArtistSongs() {
 
   return (
     <QueryClientProvider client={queryClient}>
-        <h1>Artist songs Page</h1>
-        <ArtistCard artistID={artistID} />
+      <h1>Artist songs Page</h1>
+      <ArtistCard artistID={artistID} />
     </QueryClientProvider>
   );
 }

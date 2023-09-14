@@ -1,17 +1,17 @@
 .header {
-  color: black
+  color: black;
 }
 .container {
   display: flex;
   position: relative;
-  align-items: center; 
+  align-items: center;
   justify-content: center;
   text-align: center;
   color: white;
   padding: 2rem;
 }
 
-.low-center a{
+.low-center a {
   font-size: 5vw;
   position: absolute;
   top: 50%;
@@ -23,12 +23,11 @@
 }
 .low-center a:hover,
 .low-center a:focus {
-  color: black;  
+  color: black;
 }
 .arrow-button {
   background: black;
   font-size: 2rem;
   cursor: pointer;
-  color: white; 
+  color: white;
 }
-

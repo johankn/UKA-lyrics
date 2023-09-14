@@ -1,45 +1,44 @@
 .burger-menu {
-    position: fixed;
-    top: 0;
-    right: -180px; /* Start off-screen to the right */
-    width: 250px; /* Adjust the menu width as needed */
-    height: 100%;
-    transition: right 0.3s ease; /* Transition the right property */
-    z-index: 1; /* Ensure the menu is above other content */
-  }
-  
-  .burger-menu.open {
-    right: 0; /* Move in from the right when open */
-  }
-  
-  .burger-icon {
-    cursor: pointer;
-    padding: 20px;
-  }
-  
-  .line {
-    width: 25px;
-    height: 2px;
-    background-color: rgb(4, 4, 4);
-    margin: 5px 0;
-  }
-  
-  .menu {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    text-align: center;
-  }
-  
-  .menu li {
-    padding: 20px;
-    font-size: 20px;
-    color: rgb(25, 25, 25);
-    cursor: pointer;
-    transition: background-color 0.3s;
-  }
-  
-  .menu li:hover {
-    background-color: rgba(196, 203, 231, 0.7);
-    
-  }
+  position: fixed;
+  top: 0;
+  right: -180px; /* Start off-screen to the right */
+  width: 250px; /* Adjust the menu width as needed */
+  height: 100%;
+  transition: right 0.3s ease; /* Transition the right property */
+  z-index: 1; /* Ensure the menu is above other content */
+}
+
+.burger-menu.open {
+  right: 0; /* Move in from the right when open */
+}
+
+.burger-icon {
+  cursor: pointer;
+  padding: 20px;
+}
+
+.line {
+  width: 25px;
+  height: 2px;
+  background-color: rgb(4, 4, 4);
+  margin: 5px 0;
+}
+
+.menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+.menu li {
+  padding: 20px;
+  font-size: 20px;
+  color: rgb(25, 25, 25);
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.menu li:hover {
+  background-color: rgba(196, 203, 231, 0.7);
+}

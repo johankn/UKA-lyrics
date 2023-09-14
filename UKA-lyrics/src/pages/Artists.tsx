@@ -1,7 +1,11 @@
+import BurgerMenu from "../assets/BurgerMenu";
+
 function Artists () {
   return (
-    <div className="w-15 h-100 bg-pink">
-    </div>
+    <>
+      <BurgerMenu/>
+      <div className="w-15 h-100 bg-pink"></div>
+    </>
   )
 }
 

@@ -1,5 +1,8 @@
+import { useParams } from "react-router-dom";
+
 function Artists () {
-  return <h1>ArtistSongs Page</h1>;
+  const { trackId } = useParams();
+  return <h1>{trackId}</h1>;
 }
 
 export default Artists;

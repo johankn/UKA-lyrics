@@ -1,31 +1,50 @@
+import { useNavigate } from "react-router-dom";
+
 function Favourites () {
-  const FavouritesList = [["50 cent", "Candy Shop", "/artistsongs"], ["60 cent", "Sandy Shop", "/artistsongs"], ["70 cent", "Kandy Shop", "/artistsongs"] ] //må se an hvordan API-et returnerer data
-  const FavouriteCards = ({favouritesList}) => (
-    <>
-      {favouritesList.map(favourite => (
-        <FavouriteCard artist={favourite[0]} song={favourite[1]} href={favourite[2]}></FavouriteCard> //bør lage en favourite-type eller noe annet som ser bedre ut enn en liste med strings
-      ))}
-    </>
-  )
+  localStorage.setItem("Candy Shop", "100000")  
+  localStorage.setItem("Sandy Shop", "200000")
   return (
     <>
-      <h1>Favourites Page</h1>
-      <FavouriteCards favouritesList={FavouritesList}></FavouriteCards>
+      <h1>Favourites</h1>
+      <FavouriteCards></FavouriteCards>
     </>
   );
 }
 
+function FavouriteCards () {
+  var favourites = new Array;
+  for(var i=0, len=localStorage.length; i<len; i++) {
+    var key = localStorage.key(i);
+    if (key != null) {
+      var value = localStorage.getItem(key);
+      favourites.push([key, value]);
+    }
+}
+console.log(favourites)
+  return (
+    <ul>
+        {favourites.map((favourite) => (
+            <FavouriteCard key={favourite[1]} song={favourite[0]} trackId={favourite[1]}></FavouriteCard>
+        ))}
+    </ul>
+  );
+}
+
 type FavouriteCardProps = {
-  artist: string;
   song: string;
-  href: string;
+  trackId: string;
 };
 
 
-function FavouriteCard ({artist, song, href}: FavouriteCardProps) { //TODO: Legge til styling
+function FavouriteCard ({song, trackId}: FavouriteCardProps) { //TODO: Legge til styling. Må sende med trackId så man routes rett til riktig sang.
+  const navigate = useNavigate();
+
+  function handleClick() {
+    navigate("/artistSongs/" + trackId);
+  }
   return (
     <div className="btn">
-          <button onClick={event => window.location.href=href}>{artist} {song}</button>
+          <button onClick={handleClick}>{song}{trackId}</button>
     </div>
   
   )

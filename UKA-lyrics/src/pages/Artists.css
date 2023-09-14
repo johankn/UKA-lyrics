@@ -1,3 +1,11 @@
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+
+}
+
+
 .pinkArtistbutton {
   background-color: #ff809f;
   margin-top: 2rem;
@@ -5,7 +13,7 @@
   text-align: center;
   border-radius: 1rem;
   width: 100%;
-  padding: 0.25rem;
+  padding: 0.5rem;
   align-items: center;
 }
 
@@ -16,13 +24,12 @@
   text-align: center;
   border-radius: 1rem;
   width: 100%;
-  padding: 0.25rem;
+  padding: 0.5rem;
   align-items: center;
 }
 
 .pinkArtistbutton button {
   background-color: #ff809f; /* Add the same background color */
-  color: #00008b; /* Text color */
   border: none; /* Remove the default button border */
   width: 100%; /* Make the button as wide as the parent div */
   height: 100%; /* Make the button as tall as the parent div */
@@ -30,13 +37,15 @@
 
 .greenArtistbutton button {
   background-color: #4eb4a0; /* Add the same background color */
-  color: #00008b; /* Text color */
   border: none; /* Remove the default button border */
   width: 100%; /* Make the button as wide as the parent div */
   height: 100%; /* Make the button as tall as the parent div */
 }
 
 .tilbakeKnapp img {
-  width: 50px;
+  width: 100px;
   height: 50px;
+  cursor: pointer; /* Add a pointer cursor to indicate it's clickable */
 }
+
+

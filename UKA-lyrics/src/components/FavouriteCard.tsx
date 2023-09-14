@@ -12,7 +12,7 @@
     }
     return (
       <>
-            <button onClick={handleClick}>{song}{trackId}</button>
+            <button className="button" onClick={handleClick}>{song}{trackId}</button>
       </>
     
     )

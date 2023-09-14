@@ -13,7 +13,7 @@
   padding: 10px 20px; /* Adjust padding as needed */
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen {
   h1 {
     font-size: 1vw;
     line-height: 0.6;

@@ -1,0 +1,27 @@
+
+.goBackButton {
+    position: fixed;
+    top: 0;
+    left: -110px; /* Start off-screen to the right */
+    width: 250px; /* Adjust the menu width as needed */
+    height: 100%;
+    z-index: 1; /* Ensure the menu is above other content */
+    padding: 25px;
+    outline: none;
+  }
+
+.goBackButton button{
+    background-color: #FFFDF0;
+}
+
+.goBackButton button svg{
+    font-size: 25px;
+}
+
+.material-symbols-outlined {
+font-variation-settings:
+'FILL' 0,
+'wght' 400,
+'GRAD' 0,
+'opsz' 24;
+}

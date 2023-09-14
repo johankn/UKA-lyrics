@@ -15,7 +15,7 @@ function HomePage() {
         </div>
         <div className="btn">
           <button onClick={() => (window.location.href = "/artists")}>
-            Velg artist
+            VELG ARTIST
           </button>
         </div>
       </div>

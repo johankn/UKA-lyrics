@@ -1,3 +1,10 @@
+.mainDiv {
+  width:100vh;
+  margin: 0 auto;
+  text-align: center;
+  align-items: center;
+}
+
 .artists {
   display: flex;
   flex-direction: column;
@@ -7,34 +14,38 @@
 
 .pinkArtistbutton {
   background-color: #ff809f;
-  margin-top: 2rem;
+  margin-top: 1.3rem;
   font-size: 1.5rem;
   text-align: center;
   border-radius: 1rem;
   width: 250px;
   padding: 0.5rem;
   align-items: center;
-  height: 70px;
+  height: 60px;
 }
 
 .pinkArtistbutton:hover {
   background-color: #e96485;
+  color: #fff;
+  border: none;
 }
 
 .greenArtistbutton {
   background-color: #4eb4a0;
-  margin-top: 2rem;
+  margin-top: 1.3rem;
   font-size: 1.5rem;
   text-align: center;
   border-radius: 1rem;
   width: 250px;
   padding: 0.5rem;
   align-items: center;
-  height: 70px;
+  height: 60px;
 }
 
 .greenArtistbutton:hover {
   background-color: #2a806f;
+  color: #fff;
+  border:none;
 }
 
 .pinkArtistbutton button {
@@ -51,8 +62,4 @@
   height: 100%; /* Make the button as tall as the parent div */
 }
 
-.tilbakeKnapp img {
-  width: 100px;
-  height: 50px;
-  cursor: pointer; /* Add a pointer cursor to indicate it's clickable */
-}
+

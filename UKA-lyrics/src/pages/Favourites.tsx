@@ -1,5 +1,5 @@
 import BurgerMenu from "../assets/BurgerMenu";
-import GoBackButton from "../assets/goBackButton";
+import GoBackButton from "../assets/GoBackButton";
 import FavouriteCard from "../components/FavouriteCard";
 import "../App.css";
 import "../index.css";

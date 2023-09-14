@@ -26,6 +26,8 @@
 
 .pinkArtistbutton:hover {
   background-color: #e96485;
+  color: #fff;
+  border: none;
 }
 
 .greenArtistbutton {
@@ -42,6 +44,8 @@
 
 .greenArtistbutton:hover {
   background-color: #2a806f;
+  color: #fff;
+  border:none;
 }
 
 .pinkArtistbutton button {

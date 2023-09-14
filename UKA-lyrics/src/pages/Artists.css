@@ -62,8 +62,4 @@
   height: 100%; /* Make the button as tall as the parent div */
 }
 
-.tilbakeKnapp img {
-  width: 100px;
-  height: 50px;
-  cursor: pointer; /* Add a pointer cursor to indicate it's clickable */
-}
+

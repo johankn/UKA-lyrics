@@ -2,11 +2,7 @@
 .goBackButton {
     position: fixed;
     top: 0;
-    left: -90px; /* Start off-screen to the right */
-    width: 250px; /* Adjust the menu width as needed */
-    height: 100%;
-    z-index: 1; /* Ensure the menu is above other content */
-    outline: none;
+    left: -10px; /* Start off-screen to the right */
   }
 
 .goBackButton button{

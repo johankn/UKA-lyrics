@@ -16,7 +16,7 @@ function Artists() {
               src="../public/tilbakeKnapp.png"
               alt="Tilbake button"
               onClick={() => {
-                window.location.href = "HomePage.tsx"; // Update the URL to your desired location
+                window.location.href = "/"; // Update the URL to your desired location
               }}
             />
         </div>

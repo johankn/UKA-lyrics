@@ -1,4 +1,3 @@
-import "./HomePage.css";
 import "../App.css";
 import "../index.css";
 import "./Artists.css";
@@ -7,8 +6,8 @@ function Artists() {
   return (
     <>
       <div className="mainDiv">
+        <div className="wrapper">
         <div className="tilbakeKnapp">
-          <button className="tilbakeKnapp">
             <img
               src="../public/tilbakeKnapp.png"
               alt="Tilbake button"
@@ -16,10 +15,9 @@ function Artists() {
                 window.location.href = "HomePage.tsx"; // Update the URL to your desired location
               }}
             />
-          </button>
         </div>
-
-        <div className="artists ">
+        </div>
+        <div className="artists">
           <div className="pinkArtistbutton">
             <button
               onClick={(event) =>
@@ -32,7 +30,7 @@ function Artists() {
           <div className="greenArtistbutton">
             <button
               onClick={(event) =>
-                (window.location.href = "/artistssongs/504cl42JQLRqlZddfZ3S4z")
+                (window.location.href = "/artistsongs/504cl42JQLRqlZddfZ3S4z")
               }
             >
               Cezinando
@@ -41,7 +39,7 @@ function Artists() {
           <div className="pinkArtistbutton">
             <button
               onClick={(event) =>
-                (window.location.href = "/artistssongs/46pSx5MtwhorubZuHbwM0Q")
+                (window.location.href = "/artistsongs/46pSx5MtwhorubZuHbwM0Q")
               }
             >
               Arif
@@ -50,7 +48,7 @@ function Artists() {
           <div className="greenArtistbutton">
             <button
               onClick={(event) =>
-                (window.location.href = "/artistssongs/3AVfmawzu83sp94QW7CEGm")
+                (window.location.href = "/artistsongs/3AVfmawzu83sp94QW7CEGm")
               }
             >
               Astrid S
@@ -59,7 +57,7 @@ function Artists() {
           <div className="pinkArtistbutton">
             <button
               onClick={(event) =>
-                (window.location.href = "/artistssongs/0x3PXj1WnuW7YsBxQK57xM")
+                (window.location.href = "/artistsongs/0x3PXj1WnuW7YsBxQK57xM")
               }
             >
               Ruben

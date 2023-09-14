@@ -3,78 +3,74 @@ import "./HomePage.css";
 import "../App.css";
 import "../index.css";
 import "./Artists.css";
+import {useNavigate} from "react-router-dom";
+import GoBackButton from "../assets/goBackButton";
 
 function Artists() {
+
+  const navigate = useNavigate();
+
   return (
     <>
       <BurgerMenu />
+      <GoBackButton/>
       <div className="mainDiv">
-        <div className="wrapper">
-          <div className="tilbakeKnapp">
-            <img
-              src="/tilbakeKnapp.png"
-              alt="Tilbake button"
-              onClick={() => {
-                window.location.href = "/";
-              }}
-            />
-          </div>
-        </div>
+        <h1>Velg en artist</h1>
         <div className="artists">
-          <div className="pinkArtistbutton">
-            <button
+          
+            <button className="pinkArtistbutton"
               onClick={() =>
                 (window.location.href = "/artistsongs/3q7HBObVc0L8jNeTe5Gofh")
               }
             >
               50 cent
             </button>
-          </div>
-          <div className="greenArtistbutton">
-            <button
+          
+          
+            <button className="greenArtistbutton"
               onClick={() =>
                 (window.location.href = "/artistsongs/504cl42JQLRqlZddfZ3S4z")
               }
             >
               Cezinando
             </button>
-          </div>
-          <div className="pinkArtistbutton">
-            <button
+          
+          
+            <button className="pinkArtistbutton"
               onClick={() =>
                 (window.location.href = "/artistsongs/46pSx5MtwhorubZuHbwM0Q")
               }
             >
               Arif
             </button>
-          </div>
-          <div className="greenArtistbutton">
-            <button
+  
+          
+            <button className="greenArtistbutton"
               onClick={() =>
                 (window.location.href = "/artistsongs/3AVfmawzu83sp94QW7CEGm")
               }
             >
               Astrid S
             </button>
-          </div>
-          <div className="pinkArtistbutton">
-            <button
+          
+          
+            <button className="pinkArtistbutton"
               onClick={() =>
                 (window.location.href = "/artistsongs/0x3PXj1WnuW7YsBxQK57xM")
               }
             >
               Ruben
             </button>
-          </div>
-          <div className="greenArtistbutton">
-            <button
+          
+      
+            <button className="greenArtistbutton"
               onClick={() =>
                 (window.location.href = "/artistsongs/5r6ViSL3nacDRVBtnXlixL")
               }
             >
               Ramon
             </button>
-          </div>
+          
         </div>
       </div>
     </>

@@ -2,6 +2,7 @@ import { QueryClient, QueryClientProvider } from "react-query";
 import ArtistCard from "../components/ArtistCard";
 import { useParams } from "react-router-dom";
 import "../index.css";
+import GoBackButton from "../assets/goBackButton";
 
 function ArtistSongs() {
   const { artistID } = useParams<{ artistID: string }>();
@@ -13,10 +14,12 @@ function ArtistSongs() {
   }
 
   return (
+    <><GoBackButton />
+    
     <QueryClientProvider client={queryClient}>
       <h1>Artist songs Page</h1>
       <ArtistCard artistID={artistID} />
-    </QueryClientProvider>
+    </QueryClientProvider></>
   );
 }
 

@@ -1,13 +1,15 @@
-import "./HomePage.css";
-import "../App.css";
-import "../index.css";
-import React from "react";
-import ReactDOM from "react-dom/client";
+import './HomePage.css'
+import '../App.css'
+import '../index.css'
+import React from 'react'
+import ReactDOM from 'react-dom/client'
+import { Link, useHistory } from 'react-router-dom';
 
 function HomePage() {
   return (
     <>
       <div>
+        <BurgerMenu/>
         <div id="title">
           <h1>Velkommen</h1>
           <h1>til</h1>

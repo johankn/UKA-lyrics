@@ -4,9 +4,12 @@ import HomePage from "./pages/HomePage.tsx";
 import Artists from "./pages/Artists.tsx";
 import ArtistSongs from "./pages/ArtistSongs.tsx";
 import Favourites from "./pages/Favourites.tsx";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 
 import "./index.css";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
+
+const queryClient = new QueryClient();
 
 const router = createBrowserRouter([
   {
@@ -19,7 +22,7 @@ const router = createBrowserRouter([
   },
   {
     path: "artistsongs",
-    element: <ArtistSongs />,
+    element: <ArtistSongs artistID = {'3q7HBObVc0L8jNeTe5Gofh'} />,
   },
   {
     path: "favourites",
@@ -29,6 +32,8 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <QueryClientProvider client={queryClient}>
+      <RouterProvider router={router} />
+    </QueryClientProvider>
   </React.StrictMode>,
 );

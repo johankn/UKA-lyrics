@@ -5,6 +5,7 @@
 }
 
 .goBackButton button {
+  color: black;
   background-color: transparent;
   font-size: 30px;
 }

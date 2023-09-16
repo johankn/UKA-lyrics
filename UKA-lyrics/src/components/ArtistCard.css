@@ -12,7 +12,7 @@
 }
 
 .low-center a {
-  font-size: 5vw;
+  font-size: 2.5vw;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -49,4 +49,9 @@
 .heart.clicked {
   color: red;
   font-size: 5vw;
+}
+
+.hidden {
+  visibility: hidden;
+  pointer-events: none; 
 }

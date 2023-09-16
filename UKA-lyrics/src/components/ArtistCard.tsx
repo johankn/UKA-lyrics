@@ -90,11 +90,12 @@ const ArtistCard = ({ artistID }: ArtistCardProps) => {
 
       <div className="">
         <div className="container" key={song.id}>
-          <button onClick={handlePrevious} className="arrow-button">
+          <button 
+            onClick={handlePrevious} 
+            className={`arrow-button ${currentSongIndex === 0 ? 'hidden' : ''}`}>
             ←
           </button>
           <div className="album-image">
-            {" "}
             <img
               src={song.album.images[0].url || ""}
               alt={song.name}
@@ -112,13 +113,16 @@ const ArtistCard = ({ artistID }: ArtistCardProps) => {
               {song.name}
             </a>
           </div>
-          <button onClick={handleNext} className="arrow-button">
+          <button 
+            onClick={handleNext} 
+            className={`arrow-button ${currentSongIndex === topSongs.length - 1 ? 'hidden' : ''}`}>
             →
           </button>
         </div>
       </div>
     </div>
-  );
+);
+
 };
 
 export default ArtistCard;

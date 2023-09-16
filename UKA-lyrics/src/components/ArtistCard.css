@@ -31,3 +31,22 @@
   cursor: pointer;
   color: white;
 }
+.album-image {
+  position: relative;
+}
+.heart {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  size: 2vw;
+  cursor: pointer;
+  color: transparent;
+  text-shadow: 0 0 0 black;
+  transition: color 0.3s ease;
+  font-size: 5vw;
+}
+
+.heart.clicked {
+  color: red;
+  font-size: 5vw;
+}

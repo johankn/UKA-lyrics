@@ -6,15 +6,10 @@ import "../index.css";
 import "./Favourites.css";
 import "./HomePage.css";
 
-function Favourites () {
-  var favourites = new Array;
-  for(var i=0, len=localStorage.length; i<len; i++) {
-    var key = localStorage.key(i);
-    if (key != null) {
-      var value = localStorage.getItem(key);
-      favourites.push([key, value]);
-    }
-}
+function Favourites() {
+  const favourites = JSON.parse(localStorage.getItem("favorites") || "{}");
+  console.log(favourites);
+
   return (
     <>
       <BurgerMenu />
@@ -22,9 +17,16 @@ function Favourites () {
       <div className="main">
         <h1>Dine favoritter</h1>
         <div className="favourites">
-          {favourites.map((favourite, index) => (
-            <div className={index % 2 === 0 ? 'pinkFavouritebutton' : 'greenFavouritebutton'}>
-              <FavouriteCard key={index} song={favourite[0]} trackId={favourite[1]}></FavouriteCard>
+          {Object.entries(favourites).map(([songId, songName], index) => (
+            <div
+              className={
+                index % 2 === 0 ? "pinkFavouritebutton" : "greenFavouritebutton"
+              }
+            >
+              <FavouriteCard
+                key={songId}
+                songName={songName as string}
+              ></FavouriteCard>
             </div>
           ))}
         </div>

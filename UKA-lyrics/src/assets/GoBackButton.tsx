@@ -16,4 +16,3 @@ const GoBackButton = () => {
 };
 
 export default GoBackButton;
-

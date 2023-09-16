@@ -1,5 +1,5 @@
 .mainDiv {
-  width:100vh;
+  width: 100vh;
   margin: 0 auto;
   text-align: center;
   align-items: center;
@@ -45,7 +45,7 @@
 .greenArtistbutton:hover {
   background-color: #2a806f;
   color: #fff;
-  border:none;
+  border: none;
 }
 
 .pinkArtistbutton button {
@@ -61,5 +61,3 @@
   width: 100%; /* Make the button as wide as the parent div */
   height: 100%; /* Make the button as tall as the parent div */
 }
-
-

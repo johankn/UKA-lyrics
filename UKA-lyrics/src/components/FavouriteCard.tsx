@@ -8,9 +8,9 @@ function FavouriteCard({ songName }: FavouriteCardProps) {
 
   return (
     <>
-      <button className="button">
+      <div className="favouritecard">
         {songName}
-      </button>
+      </div>
     </>
   );
 }

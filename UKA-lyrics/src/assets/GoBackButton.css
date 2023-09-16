@@ -1,15 +1,14 @@
-
 .goBackButton {
-    position: fixed;
-    top: 0;
-    left: -10px; /* Start off-screen to the right */
-  }
+  position: fixed;
+  top: 0;
+  left: -10px; /* Start off-screen to the right */
+}
 
-.goBackButton button{
-    background-color: transparent;
-    font-size: 30px;
+.goBackButton button {
+  background-color: transparent;
+  font-size: 30px;
 }
 
 .goBackButton button:hover {
-    border:none;
+  border: none;
 }

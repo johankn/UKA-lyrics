@@ -2,6 +2,8 @@ import { useQuery } from "react-query";
 import { getAccessToken, getTopSongsOfArtist } from "../api/SpotifyAPI.tsx";
 import "./ArtistCard.css";
 import { useEffect, useState } from "react";
+import BurgerMenu from "../assets/BurgerMenu";
+import GoBackButton from "../assets/GoBackButton";
 
 type Song = {
   id: string;
@@ -29,8 +31,9 @@ interface ArtistCardProps {
 const ArtistCard = ({ artistID }: ArtistCardProps) => {
   const [currentSongIndex, setCurrentSongIndex] = useState(0);
 
-  const [clickedHearts, setClickedHearts] = useState<{ [songId: string]: boolean }>(
-    JSON.parse(localStorage.getItem("favorites") || "{}"));
+  const [clickedHearts, setClickedHearts] = useState<{
+    [songId: string]: string;
+  }>(JSON.parse(localStorage.getItem("favorites") || "{}"));
 
   const { data: accessToken } = useQuery("spotifyAccessToken", getAccessToken);
 
@@ -43,7 +46,6 @@ const ArtistCard = ({ artistID }: ArtistCardProps) => {
   useEffect(() => {
     localStorage.setItem("favorites", JSON.stringify(clickedHearts));
   }, [clickedHearts]);
-  
 
   if (isLoading || !topSongs) return <div>Loading...</div>;
 
@@ -61,30 +63,27 @@ const ArtistCard = ({ artistID }: ArtistCardProps) => {
 
   const song = topSongs[currentSongIndex];
 
-  const isFavorited = clickedHearts[song.id];
+  const isFavorited = Boolean(clickedHearts[song.id]);
 
-
-  const handleHeartClick = (songId: string) => {
+  const handleHeartClick = (songId: string, songName: string) => {
     setClickedHearts((prevClickedHearts) => {
-        // Check if the songId is in the clickedHearts state.
-        if (prevClickedHearts[songId]) {
-            // If it is, remove it.
-            const newHearts = { ...prevClickedHearts };
-            delete newHearts[songId];
-            return newHearts;
-        } else {
-            // If it isn't, add it.
-            return {
-                ...prevClickedHearts,
-                [songId]: true
-            };
-        }
+      if (prevClickedHearts[songId]) {
+        const newHearts = { ...prevClickedHearts };
+        delete newHearts[songId];
+        return newHearts;
+      } else {
+        return {
+          ...prevClickedHearts,
+          [songId]: songName,
+        };
+      }
     });
-};
-
+  };
 
   return (
     <div>
+      <BurgerMenu />
+      <GoBackButton />
       <div className="header">
         <h2>Top 10 songs</h2>
       </div>
@@ -101,9 +100,12 @@ const ArtistCard = ({ artistID }: ArtistCardProps) => {
               alt={song.name}
               className=""
             />
-            <div className={`heart ${isFavorited ? 'clicked' : ''}`} onClick={() => handleHeartClick(song.id)}>
-  ❤️
-</div>
+            <div
+              className={`heart ${isFavorited ? "clicked" : ""}`}
+              onClick={() => handleHeartClick(song.id, song.name)}
+            >
+              ❤️
+            </div>
           </div>
           <div className="low-center">
             <a href={song.external_urls.spotify || "#"} target="_blank">

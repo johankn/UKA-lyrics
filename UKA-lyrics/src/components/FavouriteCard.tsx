@@ -1,21 +1,18 @@
- import "./FavouriteCard.css";
- 
- type FavouriteCardProps = { // må oppdateres basert på hva som ligger i localstorage
-    song: string;
-    trackId: string;
-  };
-  
-  
-  function FavouriteCard ({song, trackId}: FavouriteCardProps) { //TODO: Legge til styling. Må sende med trackId så man routes rett til riktig sang.
-    function handleClick() {
-      // må finne ut hva som skjer her, navigere til artistSongs/trackId eller legge inn linken direkte?
-    }
-    return (
-      <>
-            <button className="button" onClick={handleClick}>{song}{trackId}</button>
-      </>
-    
-    )
-  }
+import "./FavouriteCard.css";
 
-  export default FavouriteCard
+type FavouriteCardProps = {
+  songName: string;
+};
+
+function FavouriteCard({ songName }: FavouriteCardProps) {
+
+  return (
+    <>
+      <button className="button">
+        {songName}
+      </button>
+    </>
+  );
+}
+
+export default FavouriteCard;

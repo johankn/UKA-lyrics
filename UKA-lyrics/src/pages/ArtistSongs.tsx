@@ -14,12 +14,14 @@ function ArtistSongs() {
   }
 
   return (
-    <><GoBackButton />
-    
-    <QueryClientProvider client={queryClient}>
-      <h1>Artist songs Page</h1>
-      <ArtistCard artistID={artistID} />
-    </QueryClientProvider></>
+    <>
+      <GoBackButton />
+
+      <QueryClientProvider client={queryClient}>
+        <h1>Artist songs Page</h1>
+        <ArtistCard artistID={artistID} />
+      </QueryClientProvider>
+    </>
   );
 }
 

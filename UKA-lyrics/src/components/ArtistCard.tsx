@@ -29,7 +29,8 @@ interface ArtistCardProps {
 }
 
 const ArtistCard = ({ artistID }: ArtistCardProps) => {
-  const [currentSongIndex, setCurrentSongIndex] = useState(0);
+  const initialSongIndex = Number(sessionStorage.getItem(`currentSongIndex-${artistID}`) || 0);
+  const [currentSongIndex, setCurrentSongIndex] = useState(initialSongIndex);
 
   const [clickedHearts, setClickedHearts] = useState<{
     [songId: string]: string;
@@ -46,6 +47,10 @@ const ArtistCard = ({ artistID }: ArtistCardProps) => {
   useEffect(() => {
     localStorage.setItem("favorites", JSON.stringify(clickedHearts));
   }, [clickedHearts]);
+
+  useEffect(() => {
+    sessionStorage.setItem(`currentSongIndex-${artistID}`, String(currentSongIndex));
+  }, [currentSongIndex]);
 
   if (isLoading || !topSongs) return <div>Loading...</div>;
 

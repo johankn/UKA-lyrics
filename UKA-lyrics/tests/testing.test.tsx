@@ -16,7 +16,8 @@ import FavouriteCard from "../src/components/FavouriteCard";
 //TODO:
 //Få alle eksisterende tester til å kjøre
 //Bør teste state også, f.eks burgermeny eller artistcard
-//Må rydde 
+//Rydde 
+//NB: Fjerne kommentarer!!
 
 //Test med snapshot
 test('Snapshot test of HomePage', () => { //blir noe surr med useState i BurgerMenu, men uten BurgerMenu funker den

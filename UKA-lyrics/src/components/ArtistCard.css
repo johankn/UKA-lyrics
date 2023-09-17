@@ -55,3 +55,31 @@
   visibility: hidden;
   pointer-events: none; 
 }
+
+.list-of-songs {
+  bottom: 0;
+  width: 100%;
+  max-height: 200px;
+  overflow-y: scroll;
+}
+
+.list-of-songs ol {
+  list-style-type: none;
+}
+
+.list-of-songs li {
+  padding: 5px 10px;
+}
+
+.list-of-songs button {
+  border: none;
+  cursor: pointer;
+  background-color: #ff809f;
+  color: black;
+  text-align: left;
+}
+
+.list-of-songs button:hover {
+  background-color: #4eb4a0;
+}
+

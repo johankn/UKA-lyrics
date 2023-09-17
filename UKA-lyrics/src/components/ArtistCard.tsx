@@ -84,9 +84,6 @@ const ArtistCard = ({ artistID }: ArtistCardProps) => {
     <div>
       <BurgerMenu />
       <GoBackButton />
-      <div className="header">
-        <h2>Top 10 songs</h2>
-      </div>
 
       <div className="">
         <div className="container" key={song.id}>
@@ -118,7 +115,20 @@ const ArtistCard = ({ artistID }: ArtistCardProps) => {
             className={`arrow-button ${currentSongIndex === topSongs.length - 1 ? 'hidden' : ''}`}>
             →
           </button>
-        </div>
+
+        </div>          
+
+      </div> 
+      <div className="list-of-songs">
+        <ol>
+          {topSongs.map((s, index) => (
+            <li key={s.id}>
+              <button onClick={() => setCurrentSongIndex(index)}>
+                {index+1}. {s.name}
+              </button>
+            </li>
+          ))}
+        </ol>
       </div>
     </div>
 );

@@ -4,7 +4,7 @@ import { useParams } from "react-router-dom";
 import "../index.css";
 import GoBackButton from "../assets/GoBackButton";
 
-function ArtistSongs() {
+function ArtistSongs({}) {
   const { artistID } = useParams<{ artistID: string }>();
 
   const queryClient = new QueryClient();
@@ -16,9 +16,8 @@ function ArtistSongs() {
   return (
     <>
       <GoBackButton />
-
       <QueryClientProvider client={queryClient}>
-        <h1>Artist songs Page</h1>
+        <h1>Topp 10 sanger</h1>
         <ArtistCard artistID={artistID} />
       </QueryClientProvider>
     </>

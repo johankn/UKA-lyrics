@@ -84,17 +84,15 @@ const ArtistCard = ({ artistID }: ArtistCardProps) => {
     <div>
       <BurgerMenu />
       <GoBackButton />
-      <div className="header">
-        <h2>Top 10 songs</h2>
-      </div>
 
       <div className="">
         <div className="container" key={song.id}>
-          <button onClick={handlePrevious} className="arrow-button">
+          <button 
+            onClick={handlePrevious} 
+            className={`arrow-button ${currentSongIndex === 0 ? 'hidden' : ''}`}>
             ←
           </button>
           <div className="album-image">
-            {" "}
             <img
               src={song.album.images[0].url || ""}
               alt={song.name}
@@ -112,13 +110,29 @@ const ArtistCard = ({ artistID }: ArtistCardProps) => {
               {song.name}
             </a>
           </div>
-          <button onClick={handleNext} className="arrow-button">
+          <button 
+            onClick={handleNext} 
+            className={`arrow-button ${currentSongIndex === topSongs.length - 1 ? 'hidden' : ''}`}>
             →
           </button>
-        </div>
+
+        </div>          
+
+      </div> 
+      <div className="list-of-songs">
+        <ol>
+          {topSongs.map((s, index) => (
+            <li key={s.id}>
+              <button onClick={() => setCurrentSongIndex(index)}>
+                {index+1}. {s.name}
+              </button>
+            </li>
+          ))}
+        </ol>
       </div>
     </div>
-  );
+);
+
 };
 
 export default ArtistCard;

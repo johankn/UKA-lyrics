@@ -3,6 +3,8 @@ import ArtistCard from "../components/ArtistCard";
 import { useParams } from "react-router-dom";
 import "../index.css";
 import GoBackButton from "../assets/GoBackButton";
+import "../components/ArtistCard.css";
+import BurgerMenu from "../assets/BurgerMenu";
 
 function ArtistSongs({}) {
   const { artistID } = useParams<{ artistID: string }>();
@@ -16,6 +18,7 @@ function ArtistSongs({}) {
   return (
     <>
       <GoBackButton />
+      <BurgerMenu />
       <QueryClientProvider client={queryClient}>
         <h1>Topp 10 sanger</h1>
         <ArtistCard artistID={artistID} />

@@ -29,7 +29,9 @@ interface ArtistCardProps {
 }
 
 const ArtistCard = ({ artistID }: ArtistCardProps) => {
-  const initialSongIndex = Number(sessionStorage.getItem(`currentSongIndex-${artistID}`) || 0);
+  const initialSongIndex = Number(
+    sessionStorage.getItem(`currentSongIndex-${artistID}`) || 0
+  );
   const [currentSongIndex, setCurrentSongIndex] = useState(initialSongIndex);
 
   const [clickedHearts, setClickedHearts] = useState<{
@@ -41,7 +43,7 @@ const ArtistCard = ({ artistID }: ArtistCardProps) => {
   const { data: topSongs, isLoading } = useQuery<Song[], Error>(
     ["artistTopSongs", artistID, accessToken],
     () => getTopSongsOfArtist(artistID, accessToken!),
-    { enabled: !!accessToken },
+    { enabled: !!accessToken }
   );
 
   useEffect(() => {
@@ -49,7 +51,10 @@ const ArtistCard = ({ artistID }: ArtistCardProps) => {
   }, [clickedHearts]);
 
   useEffect(() => {
-    sessionStorage.setItem(`currentSongIndex-${artistID}`, String(currentSongIndex));
+    sessionStorage.setItem(
+      `currentSongIndex-${artistID}`,
+      String(currentSongIndex)
+    );
   }, [currentSongIndex]);
 
   if (isLoading || !topSongs) return <div>Loading...</div>;
@@ -92,9 +97,10 @@ const ArtistCard = ({ artistID }: ArtistCardProps) => {
 
       <div className="">
         <div className="container" key={song.id}>
-          <button 
-            onClick={handlePrevious} 
-            className={`arrow-button ${currentSongIndex === 0 ? 'hidden' : ''}`}>
+          <button
+            onClick={handlePrevious}
+            className={`arrow-button ${currentSongIndex === 0 ? "hidden" : ""}`}
+          >
             ←
           </button>
           <div className="album-image">
@@ -115,29 +121,29 @@ const ArtistCard = ({ artistID }: ArtistCardProps) => {
               {song.name}
             </a>
           </div>
-          <button 
-            onClick={handleNext} 
-            className={`arrow-button ${currentSongIndex === topSongs.length - 1 ? 'hidden' : ''}`}>
+          <button
+            onClick={handleNext}
+            className={`arrow-button ${
+              currentSongIndex === topSongs.length - 1 ? "hidden" : ""
+            }`}
+          >
             →
           </button>
-
-        </div>          
-
-      </div> 
+        </div>
+      </div>
       <div className="list-of-songs">
         <ol>
           {topSongs.map((s, index) => (
             <li key={s.id}>
               <button onClick={() => setCurrentSongIndex(index)}>
-                {index+1}. {s.name}
+                {index + 1}. {s.name}
               </button>
             </li>
           ))}
         </ol>
       </div>
     </div>
-);
-
+  );
 };
 
 export default ArtistCard;

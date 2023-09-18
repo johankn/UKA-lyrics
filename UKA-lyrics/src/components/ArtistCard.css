@@ -1,28 +1,112 @@
 .header {
   color: black;
+  position: absolute;
+  top: 7rem; /* Adjust this value as needed */
+  left: 50%;
+  width: 100vw;
+  font-size: 1rem;
+  transform: translateX(-50%);
 }
+
 .container {
   display: flex;
+  gap: 5px;
+  transform-origin: center;
   position: relative;
   align-items: center;
   justify-content: center;
   text-align: center;
   color: white;
-  padding: 2rem;
+  margin: 20px;
 }
 
-.low-center a {
-  font-size: 2.5vw;
+@media only screen and (min-width: 500px) {
+  .album-image img {
+    width: 335px;
+  }
+  .arrow-button {
+    background: black;
+    align-items: center;
+    font-size: 2rem;
+    width: 4rem;
+    height: 3rem;
+    align-content: center;
+    text-align: center;
+    cursor: pointer;
+    color: white;
+    padding: 3px;
+    border-radius: 10px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .album-image img {
+    width: 100%;
+  }
+  .arrow-button {
+    background: black;
+    align-items: center;
+    font-size: 5vw;
+    width: 3rem;
+    height: 4rem;
+    align-content: center;
+    text-align: center;
+    cursor: pointer;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+  }
+}
+
+.topTitle {
+  position: absolute;
+  top: 0; /* Adjust this value as needed */
+  left: 50%;
+  width: 100vw;
+  font-size: 1.2rem;
+  transform: translateX(-50%);
+}
+
+.artistName {
+  position: absolute;
+  top: 0; /* Adjust this value as needed */
+  left: 50%;
+  width: 100vw;
+  font-size: 2rem;
+  transform: translateX(-50%);
+}
+
+.content {
+  position: absolute;
+  width: 100vw;
+  top: 10rem; /* Adjust this value as needed */
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.low-center {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: white;
+  color: rgb(27, 27, 27);
   text-align: center;
-  padding: 15px 0;
+  display: inline-block;
+  padding: 10px 20px; /* Adjust padding as needed */
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.7
+  ); /* Set your desired background color */
+  backdrop-filter: blur(5px);
+  text-decoration: none;
+  border: none;
+  border-radius: 20px; /* Adjust the border radius as needed */
+  cursor: pointer;
 }
-.low-center a:hover,
-.low-center a:focus {
+.low-center:hover,
+.low-center:focus {
   color: black;
 }
 .arrow-button {
@@ -53,7 +137,7 @@
 
 .hidden {
   visibility: hidden;
-  pointer-events: none; 
+  pointer-events: none;
 }
 
 .list-of-songs {
@@ -82,4 +166,3 @@
 .list-of-songs button:hover {
   background-color: #4eb4a0;
 }
-

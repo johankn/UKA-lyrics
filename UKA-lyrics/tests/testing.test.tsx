@@ -12,11 +12,14 @@ import React from "react";
 import FavouriteCard from "../src/components/FavouriteCard";
 
 //Før testing: Kjør npm install -D for vitest, jsdom, @testing-library/react, @testing-library/jest-dom, @testing-library/user-event
+//Kall alle testfiler xxx.test.tsx for at vitest skal finne dem
+//Studass sier det kan hende at problemene med useState og useEffect har med versjonen av vitest å gjøre, så kan hende det hjelper å reinstallere. 
 
 //TODO:
 //Få alle eksisterende tester til å kjøre
 //Bør teste state også, f.eks burgermeny eller artistcard
 //Rydde 
+//Endre filnavn
 //NB: Fjerne kommentarer!!
 
 //Test med snapshot
@@ -38,8 +41,8 @@ test('Test of the content of HomePage', () => { //blir noe surr med useState i B
 
 // Test med props
 test('Test of props of FavouriteCard', () => { //blir noe surr med useState i BurgerMenu, men uten BurgerMenu funker den
-    render(<FavouriteCard song="mockSong" trackId="mockTrackId"/>);
-    const favouriteCard = screen.getByText(/mockSongmockTrackId/i);
+    render(<FavouriteCard songName="mockSong"/>);
+    const favouriteCard = screen.getByText(/mockSong/i);
     expect(favouriteCard).toBeTruthy;
 });
 
@@ -48,6 +51,9 @@ test('Click on VELG ARTIST navigates to next page', () => { //blir også her noe
     render(<HomePage /> )
     userEvent.click(screen.getByText('VELG ARTIST'))
     expect(screen.getByText('Artist songs Page')).toBeTruthy(); //leter på samme side i stedet for å se på neste side, trenger router som wrapper?
+    expect(screen.getByRole('button', {
+      name: /VELG ARTIST/i
+    })).toBeCalled(); //evt bare teste at den er klikket typ sånn her
   })
 
 const queryClient = new QueryClient();
@@ -71,7 +77,7 @@ const router = createBrowserRouter([
   },
 ]);
 
-// Test av navigasjon, ikke påkrevd men sikkert fint å teste
+// Test av navigasjon, ikke påkrevd men sikkert fint å teste hvis vi får det til å funke
   test('React Router navigates between pages', () => { // vil utvide denne for å teste at systemet navigerer riktig ved click 
     render( <React.StrictMode>
         <QueryClientProvider client={queryClient}>
@@ -80,5 +86,5 @@ const router = createBrowserRouter([
       </React.StrictMode>,);
     expect(screen.getByText('Velkommen')).toBeTruthy(); // blir her noe surr med useEffect
     userEvent.click(screen.getByText('VELG ARTIST'))
-    expect(screen.getByText('Artist songs Page')).toBeTruthy();
+    expect(screen.getByText('Artist songs Page')).toBeTruthy(); // vil teste at siden navigerer videre til neste ved knappetrykk
   })

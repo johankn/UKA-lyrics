@@ -10,11 +10,17 @@
 
 .burger-menu.open {
   right: 0; /* Move in from the right when open */
+  background-color: rgba(95, 95, 95, 0.8);
+  backdrop-filter: blur(7px);
 }
 
 .burger-icon {
   cursor: pointer;
   padding: 20px;
+}
+
+.burger-menu.open .line {
+  background-color: rgb(233, 233, 233);
 }
 
 .line {
@@ -34,7 +40,7 @@
 .menu li {
   padding: 20px;
   font-size: 20px;
-  color: rgb(25, 25, 25);
+  color: rgb(234, 234, 234);
   cursor: pointer;
   transition: background-color 0.3s;
 }

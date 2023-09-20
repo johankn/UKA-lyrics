@@ -9,7 +9,7 @@ import { MemoryRouter, createBrowserRouter } from "react-router-dom";
 import '@testing-library/jest-dom';
 import Artists from "../src/pages/Artists";
 import Favourites from "../src/pages/Favourites";
-import React from "react";
+import {StrictMode} from "react";
 import FavouriteCard from "../src/components/FavouriteCard";
 
 //Test med snapshot
@@ -70,11 +70,11 @@ const router = createBrowserRouter([
 
 test('React Router navigates between pages', async () => { 
   render(
-          <React.StrictMode>
+          <StrictMode>
               <QueryClientProvider client={queryClient}>
               <RouterProvider router={router} />
               </QueryClientProvider>
-          </React.StrictMode>
+          </StrictMode>
   );
 
   expect(screen.getByText('Velkommen')).toBeInTheDocument(); 

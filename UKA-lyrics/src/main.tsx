@@ -1,5 +1,5 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
+import {StrictMode} from "react";
+import {createRoot} from "react-dom/client";
 import HomePage from "./pages/HomePage.tsx";
 import Artists from "./pages/Artists.tsx";
 import ArtistSongs from "./pages/ArtistSongs.tsx";
@@ -13,29 +13,29 @@ const queryClient = new QueryClient();
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: "/project1",
     element: <HomePage />,
   },
   {
-    path: "artists",
+    path: "project1/artists",
     element: <Artists />,
   },
   {
-    path: "artistsongs/:artistID",
+    path: "project1/artistsongs/:artistID",
     element: <ArtistSongs />,
   },
   {
-    path: "favourites",
+    path: "project1/favourites",
     element: <Favourites />,
   },
 ]);
 
-ReactDOM.createRoot(document.getElementById("root")!).render(
-  <React.StrictMode>
+createRoot(document.getElementById("root")!).render(
+  <StrictMode>
     <QueryClientProvider client={queryClient}>
       <RouterProvider router={router} />
     </QueryClientProvider>
-  </React.StrictMode>,
+  </StrictMode>,
 );
 
 export default router;

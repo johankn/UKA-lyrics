@@ -4,6 +4,7 @@ import "./ArtistCard.css";
 import { useEffect, useState } from "react";
 import BurgerMenu from "../assets/BurgerMenu";
 import GoBackButton from "../assets/GoBackButton";
+import PopUp from "./PopUp";
 
 type Song = {
   id: string;
@@ -29,6 +30,8 @@ interface ArtistCardProps {
 }
 
 const ArtistCard = ({ artistID }: ArtistCardProps) => {
+  const [showPopup, setShowPopup] = useState(false);
+  const [popupMessage, setPopupMessage] = useState("");
   const initialSongIndex = Number(
     sessionStorage.getItem(`currentSongIndex-${artistID}`) || 0
   );
@@ -63,12 +66,14 @@ const ArtistCard = ({ artistID }: ArtistCardProps) => {
     if (currentSongIndex < topSongs.length - 1) {
       setCurrentSongIndex(currentSongIndex + 1);
     }
+    setShowPopup(false);
   };
 
   const handlePrevious = () => {
     if (currentSongIndex > 0) {
       setCurrentSongIndex(currentSongIndex - 1);
     }
+    setShowPopup(false);
   };
 
   const song = topSongs[currentSongIndex];
@@ -80,8 +85,12 @@ const ArtistCard = ({ artistID }: ArtistCardProps) => {
       if (prevClickedHearts[songId]) {
         const newHearts = { ...prevClickedHearts };
         delete newHearts[songId];
+        setPopupMessage("Fjernet fra favoritter");
+        setShowPopup(true);
         return newHearts;
       } else {
+        setPopupMessage("Lagt til i favoritter");
+        setShowPopup(true);
         return {
           ...prevClickedHearts,
           [songId]: songName,
@@ -89,6 +98,8 @@ const ArtistCard = ({ artistID }: ArtistCardProps) => {
       }
     });
   };
+
+
 
   return (
     <div>
@@ -142,6 +153,7 @@ const ArtistCard = ({ artistID }: ArtistCardProps) => {
           ))}
         </ol>
       </div>
+      {showPopup && <PopUp message={popupMessage} onClose={() => setShowPopup(false)}/>}
     </div>
   );
 };

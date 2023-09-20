@@ -1,7 +1,7 @@
 .goBackButton {
   position: fixed;
   top: 0;
-  left: -10px; /* Start off-screen to the right */
+  left: -10px; 
 }
 
 .goBackButton button {

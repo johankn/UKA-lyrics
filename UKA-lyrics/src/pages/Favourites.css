@@ -11,9 +11,9 @@
   text-align: center;
   border-radius: 1rem;
   align-items: center;
-  width: calc(50% - 10px); /* Calculate width for two components per row */
-  margin: 0 10px; /* Add margin to separate components */
-  margin: 10px 0; /* Add margin to separate components vertically */
+  width: calc(50% - 10px); 
+  margin: 0 10px; 
+  margin: 10px 0; 
 }
 
 .greenFavouritebutton {
@@ -22,7 +22,7 @@
   text-align: center;
   border-radius: 1rem;
   align-items: center;
-  width: calc(50% - 20px); /* Calculate width for two components per row */
-  margin: 0 10px; /* Add margin to separate components */
-  margin: 10px 0; /* Add margin to separate components vertically */
+  width: calc(50% - 20px);
+  margin: 0 10px; 
+  margin: 10px 0; 
 }

@@ -1,0 +1,20 @@
+.popup {
+    position: fixed;
+    top: 57%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(78, 180, 160, 1);
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    color:white;
+    border-radius: 20px;
+    text-align: center;
+    font-size: 12px;
+  }
+
+.popup-link {
+    color: black;
+}
+.popup-link:hover {
+    color: white;
+}

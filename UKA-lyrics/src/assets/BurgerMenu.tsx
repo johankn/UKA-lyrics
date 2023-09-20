@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { Fragment, useState } from "react";
 import "./BurgerMenu.css";
 import { Link } from "react-router-dom";
 
@@ -17,18 +17,18 @@ const BurgerMenu = () => {
         <div className="line"></div>
       </div>
       <ul className="menu">
-        {isOpen /* Makes the menu clickable only when toggled*/ && (
-          <React.Fragment>
-            <Link to="/" onClick={toggleMenu}>
+        {isOpen && (
+          <Fragment>
+            <Link to="/project1" onClick={toggleMenu}>
               <li>Forside</li>
             </Link>
-            <Link to="/artists" onClick={toggleMenu}>
+            <Link to="/project1/artists" onClick={toggleMenu}>
               <li>Artister</li>
             </Link>
-            <Link to="/favourites" onClick={toggleMenu}>
+            <Link to="/project1/favourites" onClick={toggleMenu}>
               <li>Favoritter</li>
             </Link>
-          </React.Fragment>
+          </Fragment>
         )}
       </ul>
     </div>

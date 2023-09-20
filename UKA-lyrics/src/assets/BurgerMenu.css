@@ -1,8 +1,8 @@
 .burger-menu {
   position: fixed;
   top: 0;
-  right: -180px; /* Start off-screen to the right */
-  width: 250px; /* Adjust the menu width as needed */
+  right: -180px; 
+  width: 250px; 
   height: 100%;
   transition: right 0.3s ease; /* Transition the right property */
 }

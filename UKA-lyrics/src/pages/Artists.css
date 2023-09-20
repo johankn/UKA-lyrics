@@ -49,15 +49,15 @@
 }
 
 .pinkArtistbutton button {
-  background-color: #ff809f; /* Add the same background color */
-  border: none; /* Remove the default button border */
-  width: 100%; /* Make the button as wide as the parent div */
-  height: 100%; /* Make the button as tall as the parent div */
+  background-color: #ff809f; 
+  border: none; 
+  width: 100%; 
+
 }
 
 .greenArtistbutton button {
-  background-color: #4eb4a0; /* Add the same background color */
-  border: none; /* Remove the default button border */
-  width: 100%; /* Make the button as wide as the parent div */
-  height: 100%; /* Make the button as tall as the parent div */
+  background-color: #4eb4a0; 
+  border: none; 
+  width: 100%; 
+  height: 100%; 
 }

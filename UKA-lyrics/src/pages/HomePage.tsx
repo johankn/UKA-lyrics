@@ -7,14 +7,14 @@ function HomePage() {
   return (
     <>
       <div>
-        <BurgerMenu />
+      <BurgerMenu />
         <div id="title">
           <h1>Velkommen</h1>
           <h1>til</h1>
           <h1>UKA-Lyrics</h1>
         </div>
         <div className="btn">
-          <button onClick={() => (window.location.href = "/artists")}>
+          <button onClick={() => (window.location.href = "/project1/artists")}>
             VELG ARTIST
           </button>
         </div>

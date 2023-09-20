@@ -110,7 +110,8 @@
   color: black;
 }
 .arrow-button {
-  background: black;
+  background: #160a59;
+  border: 2px solid #4eb4a0;
   font-size: 2rem;
   cursor: pointer;
   color: white;
@@ -164,5 +165,6 @@
 }
 
 .list-of-songs button:hover {
-  background-color: #4eb4a0;
+  background-color: #e96485;
+  color: white;
 }

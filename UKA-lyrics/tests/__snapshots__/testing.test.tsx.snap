@@ -7,6 +7,26 @@ exports[`Snapshot test of HomePage 1`] = `
     <div>
       <div>
         <div
+          class="burger-menu "
+        >
+          <div
+            class="burger-icon"
+          >
+            <div
+              class="line"
+            />
+            <div
+              class="line"
+            />
+            <div
+              class="line"
+            />
+          </div>
+          <ul
+            class="menu"
+          />
+        </div>
+        <div
           id="title"
         >
           <h1>
@@ -31,6 +51,26 @@ exports[`Snapshot test of HomePage 1`] = `
   </body>,
   "container": <div>
     <div>
+      <div
+        class="burger-menu "
+      >
+        <div
+          class="burger-icon"
+        >
+          <div
+            class="line"
+          />
+          <div
+            class="line"
+          />
+          <div
+            class="line"
+          />
+        </div>
+        <ul
+          class="menu"
+        />
+      </div>
       <div
         id="title"
       >

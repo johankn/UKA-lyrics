@@ -15,4 +15,14 @@ yarn dev
 pnpm dev
 ```
 
-The, open local host (as shown in terminal) with your browser to see the result.
+Then, open local host (as shown in terminal) with your browser to see the result.
+
+### Run the tests
+  
+```bash
+npm run test
+# or
+yarn test
+# or
+pnpm test
+```

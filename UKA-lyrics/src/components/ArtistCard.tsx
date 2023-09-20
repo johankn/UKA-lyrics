@@ -2,10 +2,8 @@ import { useQuery } from "react-query";
 import { getAccessToken, getTopSongsOfArtist } from "../api/SpotifyAPI.tsx";
 import "./ArtistCard.css";
 import { useEffect, useState } from "react";
-import BurgerMenu from "../assets/BurgerMenu";
-import GoBackButton from "../assets/GoBackButton";
 import PopUp from "./PopUp";
-import "../index.css"
+import "../index.css";
 
 type Song = {
   id: string;
@@ -34,7 +32,7 @@ const ArtistCard = ({ artistID }: ArtistCardProps) => {
   const [showPopup, setShowPopup] = useState(false);
   const [popupMessage, setPopupMessage] = useState("");
   const initialSongIndex = Number(
-    sessionStorage.getItem(`currentSongIndex-${artistID}`) || 0
+    sessionStorage.getItem(`currentSongIndex-${artistID}`) || 0,
   );
   const [currentSongIndex, setCurrentSongIndex] = useState(initialSongIndex);
 
@@ -47,7 +45,7 @@ const ArtistCard = ({ artistID }: ArtistCardProps) => {
   const { data: topSongs, isLoading } = useQuery<Song[], Error>(
     ["artistTopSongs", artistID, accessToken],
     () => getTopSongsOfArtist(artistID, accessToken!),
-    { enabled: !!accessToken }
+    { enabled: !!accessToken },
   );
 
   useEffect(() => {
@@ -57,9 +55,9 @@ const ArtistCard = ({ artistID }: ArtistCardProps) => {
   useEffect(() => {
     sessionStorage.setItem(
       `currentSongIndex-${artistID}`,
-      String(currentSongIndex)
+      String(currentSongIndex),
     );
-  }, [currentSongIndex]);
+  }, [currentSongIndex, artistID]);
 
   if (isLoading || !topSongs) return <div>Loading...</div>;
 
@@ -100,8 +98,6 @@ const ArtistCard = ({ artistID }: ArtistCardProps) => {
     });
   };
 
-
-
   return (
     <div>
       <div className="">
@@ -129,7 +125,11 @@ const ArtistCard = ({ artistID }: ArtistCardProps) => {
             </div>
           </div>
           <div className="low-center">
-            <a href={song.external_urls.spotify || "#"} target="_blank" className="low-center-a">
+            <a
+              href={song.external_urls.spotify || "#"}
+              target="_blank"
+              className="low-center-a"
+            >
               {song.name}
             </a>
           </div>
@@ -155,7 +155,9 @@ const ArtistCard = ({ artistID }: ArtistCardProps) => {
           ))}
         </ol>
       </div>
-      {showPopup && <PopUp message={popupMessage} onClose={() => setShowPopup(false)}/>}
+      {showPopup && (
+        <PopUp message={popupMessage} onClose={() => setShowPopup(false)} />
+      )}
     </div>
   );
 };

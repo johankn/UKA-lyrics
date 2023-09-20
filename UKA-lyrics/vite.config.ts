@@ -7,7 +7,7 @@ export default defineConfig({
   plugins: [react()],
   test: {
     globals: true,
-    environment: 'jsdom',
-   },
-   base: '/project1',
+    environment: "jsdom",
+  },
+  base: "/project1",
 });

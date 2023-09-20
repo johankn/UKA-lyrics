@@ -7,7 +7,7 @@ function HomePage() {
   return (
     <>
       <div>
-      <BurgerMenu />
+        <BurgerMenu />
         <div id="title">
           <h1>Velkommen</h1>
           <h1>til</h1>

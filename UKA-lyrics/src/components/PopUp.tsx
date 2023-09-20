@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./PopUp.css";
 
-const Popup = (props: { message: any; onClose: any; }) => {
+const Popup = (props: { message: string; onClose: () => void }) => {
   const { message, onClose } = props;
 
   const handleClick = () => {
@@ -21,8 +21,9 @@ const Popup = (props: { message: any; onClose: any; }) => {
 
   return (
     <div className="popup" onClick={handleClick}>
-      <Link to="/project1/favourites" className="popup-link">{message}</Link>
-      
+      <Link to="/project1/favourites" className="popup-link">
+        {message}
+      </Link>
     </div>
   );
 };

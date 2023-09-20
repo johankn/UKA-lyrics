@@ -1,8 +1,8 @@
 .favourites {
   display: flex;
-  flex-wrap: wrap; 
-  justify-content: space-between; 
-  margin: 10 -5px; 
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 10 -5px;
 }
 
 .pinkFavouritebutton {
@@ -11,9 +11,9 @@
   text-align: center;
   border-radius: 1rem;
   align-items: center;
-  width: calc(50% - 10px); 
-  margin: 0 10px; 
-  margin: 10px 0; 
+  width: calc(50% - 10px);
+  margin: 0 10px;
+  margin: 10px 0;
 }
 
 .greenFavouritebutton {
@@ -23,6 +23,6 @@
   border-radius: 1rem;
   align-items: center;
   width: calc(50% - 20px);
-  margin: 0 10px; 
-  margin: 10px 0; 
+  margin: 0 10px;
+  margin: 10px 0;
 }

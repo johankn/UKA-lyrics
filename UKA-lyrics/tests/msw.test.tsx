@@ -29,10 +29,10 @@ const server = setupServer(
             },
             external_urls: { spotify: "spotify_url_2" },
           },
-        ])
+        ]),
       );
-    }
-  )
+    },
+  ),
 );
 
 beforeAll(() => {
@@ -49,7 +49,7 @@ test("renders song data", async () => {
   render(
     <QueryClientProvider client={queryClient}>
       <ArtistCard artistID="123" />{" "}
-    </QueryClientProvider>
+    </QueryClientProvider>,
   );
 
   await expect(screen.findByText("Song 1")).resolves.toBeTruthy();

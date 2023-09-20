@@ -51,19 +51,19 @@ const queryClient = new QueryClient();
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: "/project1",
     element: <HomePage />,
   },
   {
-    path: "artists",
+    path: "project1/artists",
     element: <Artists />,
   },
   {
-    path: "artistsongs/:artistID",
+    path: "project1/artistsongs/:artistID",
     element: <ArtistSongs />,
   },
   {
-    path: "favourites",
+    path: "project1/favourites",
     element: <Favourites />,
   },
 ]);

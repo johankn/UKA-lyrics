@@ -1,10 +1,10 @@
 .header {
   color: black;
   position: absolute;
-  top: 7rem; 
+  top: 2rem; 
   left: 50%;
   width: 100vw;
-  font-size: 1rem;
+  font-size: 2rem;
   transform: translateX(-50%);
 }
 
@@ -55,6 +55,11 @@
     color: white;
     padding: 10px;
     border-radius: 10px;
+  }
+
+  .header {
+    top: 6rem; 
+    font-size: 2.5rem;
   }
 }
 
@@ -125,19 +130,20 @@
 }
 .heart {
   position: absolute;
-  bottom: 10px;
-  right: 10px;
-  size: 2vw;
+  bottom: 50px;
+  right: 30px;
+  width: 50px; 
+  height: 50px; 
   cursor: pointer;
   color: transparent;
   text-shadow: 0 0 0 black;
   transition: color 0.3s ease;
-  font-size: 5vw;
+  font-size: 60px; 
 }
 
 .heart.clicked {
   color: red;
-  font-size: 5vw;
+  font-size: 60px;
 }
 
 .hidden {

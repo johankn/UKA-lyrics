@@ -104,10 +104,10 @@ const ArtistCard = ({ artistID }: ArtistCardProps) => {
 
   return (
     <div>
-      <BurgerMenu />
-      <GoBackButton />
-
       <div className="">
+        <div className="topTen">
+          <h1 className="header">Topp 10 sanger</h1>
+        </div>
         <div className="container" key={song.id}>
           <button
             onClick={handlePrevious}

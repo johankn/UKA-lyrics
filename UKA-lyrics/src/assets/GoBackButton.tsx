@@ -7,7 +7,6 @@ const GoBackButton = () => {
   return (
     <div className="goBackButton">
       <button onClick={() => navigate(-1)}>
-        {/* Use your custom arrow icon */}
         <span className="custom-arrow-icon">←</span>
       </button>
     </div>

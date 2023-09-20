@@ -17,7 +17,7 @@ const BurgerMenu = () => {
         <div className="line"></div>
       </div>
       <ul className="menu">
-        {isOpen /* Makes the menu clickable only when toggled*/ && (
+        {isOpen && (
           <React.Fragment>
             <Link to="/" onClick={toggleMenu}>
               <li>Forside</li>

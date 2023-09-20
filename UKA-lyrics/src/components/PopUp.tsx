@@ -21,7 +21,7 @@ const Popup = (props: { message: any; onClose: any; }) => {
 
   return (
     <div className="popup" onClick={handleClick}>
-      <Link to="/favourites" className="popup-link">{message}</Link>
+      <Link to="/project1/favourites" className="popup-link">{message}</Link>
       
     </div>
   );

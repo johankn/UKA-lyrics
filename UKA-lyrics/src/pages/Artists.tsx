@@ -67,7 +67,7 @@ function Artists() {
             className="greenArtistbutton"
             onClick={() =>
               (window.location.href =
-                "project1/artistsongs/5r6ViSL3nacDRVBtnXlixL")
+                "/project1/artistsongs/5r6ViSL3nacDRVBtnXlixL")
             }
           >
             Ramon

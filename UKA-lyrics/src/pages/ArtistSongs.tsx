@@ -20,7 +20,6 @@ function ArtistSongs({}) {
       <GoBackButton />
       <BurgerMenu />
       <QueryClientProvider client={queryClient}>
-        <h1>Topp 10 sanger</h1>
         <ArtistCard artistID={artistID} />
       </QueryClientProvider>
     </>

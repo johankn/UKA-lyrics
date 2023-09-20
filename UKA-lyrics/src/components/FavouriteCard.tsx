@@ -5,12 +5,9 @@ type FavouriteCardProps = {
 };
 
 function FavouriteCard({ songName }: FavouriteCardProps) {
-
   return (
     <>
-      <div className="favouritecard">
-        {songName}
-      </div>
+      <div className="favouritecard">{songName}</div>
     </>
   );
 }

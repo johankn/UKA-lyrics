@@ -5,12 +5,12 @@
 }
 
 .btn button {
-  outline-color: #4eb4a0; 
-  background-color: #160a59; 
-  border-radius: 10px; 
-  border: 3px solid #4eb4a0; 
-  color: #ffffff; 
-  padding: 10px 20px; 
+  outline-color: #4eb4a0;
+  background-color: #160a59;
+  border-radius: 10px;
+  border: 3px solid #4eb4a0;
+  color: #ffffff;
+  padding: 10px 20px;
 }
 
 @media only screen {

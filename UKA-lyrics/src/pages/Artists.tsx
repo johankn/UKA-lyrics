@@ -16,7 +16,8 @@ function Artists() {
           <button
             className="pinkArtistbutton"
             onClick={() =>
-              (window.location.href = "/project1/artistsongs/3q7HBObVc0L8jNeTe5Gofh")
+              (window.location.href =
+                "/project1/artistsongs/3q7HBObVc0L8jNeTe5Gofh")
             }
           >
             50 cent
@@ -25,7 +26,8 @@ function Artists() {
           <button
             className="greenArtistbutton"
             onClick={() =>
-              (window.location.href = "/project1/artistsongs/504cl42JQLRqlZddfZ3S4z")
+              (window.location.href =
+                "/project1/artistsongs/504cl42JQLRqlZddfZ3S4z")
             }
           >
             Cezinando
@@ -34,7 +36,8 @@ function Artists() {
           <button
             className="pinkArtistbutton"
             onClick={() =>
-              (window.location.href = "/project1/artistsongs/46pSx5MtwhorubZuHbwM0Q")
+              (window.location.href =
+                "/project1/artistsongs/46pSx5MtwhorubZuHbwM0Q")
             }
           >
             Arif
@@ -43,7 +46,8 @@ function Artists() {
           <button
             className="greenArtistbutton"
             onClick={() =>
-              (window.location.href = "/project1/artistsongs/3AVfmawzu83sp94QW7CEGm")
+              (window.location.href =
+                "/project1/artistsongs/3AVfmawzu83sp94QW7CEGm")
             }
           >
             Astrid S
@@ -52,7 +56,8 @@ function Artists() {
           <button
             className="pinkArtistbutton"
             onClick={() =>
-              (window.location.href = "/project1/artistsongs/0x3PXj1WnuW7YsBxQK57xM")
+              (window.location.href =
+                "/project1/artistsongs/0x3PXj1WnuW7YsBxQK57xM")
             }
           >
             Ruben
@@ -61,7 +66,8 @@ function Artists() {
           <button
             className="greenArtistbutton"
             onClick={() =>
-              (window.location.href = "project1/artistsongs/5r6ViSL3nacDRVBtnXlixL")
+              (window.location.href =
+                "project1/artistsongs/5r6ViSL3nacDRVBtnXlixL")
             }
           >
             Ramon

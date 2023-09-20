@@ -1,5 +1,5 @@
-import {StrictMode} from "react";
-import {createRoot} from "react-dom/client";
+import { StrictMode } from "react";
+import { createRoot } from "react-dom/client";
 import HomePage from "./pages/HomePage.tsx";
 import Artists from "./pages/Artists.tsx";
 import ArtistSongs from "./pages/ArtistSongs.tsx";

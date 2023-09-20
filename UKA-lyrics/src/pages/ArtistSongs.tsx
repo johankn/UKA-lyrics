@@ -6,7 +6,7 @@ import GoBackButton from "../assets/GoBackButton";
 import "../components/ArtistCard.css";
 import BurgerMenu from "../assets/BurgerMenu";
 
-function ArtistSongs({}) {
+function ArtistSongs() {
   const { artistID } = useParams<{ artistID: string }>();
 
   const queryClient = new QueryClient();

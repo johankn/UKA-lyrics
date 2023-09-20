@@ -1,15 +1,15 @@
 .burger-menu {
   position: fixed;
   top: 0;
-  right: -180px; /* Start off-screen to the right */
-  width: 250px; /* Adjust the menu width as needed */
+  right: -180px; 
+  width: 250px; 
   height: 100%;
-  transition: right 0.3s ease; /* Transition the right property */
-  z-index: 1; /* Ensure the menu is above other content */
+  transition: right 0.3s ease; 
+  z-index: 1; 
 }
 
 .burger-menu.open {
-  right: 0; /* Move in from the right when open */
+  right: 0; 
   background-color: rgba(95, 95, 95, 0.8);
   backdrop-filter: blur(7px);
 }

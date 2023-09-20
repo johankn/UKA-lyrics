@@ -5,6 +5,7 @@ import "../index.css";
 import GoBackButton from "../assets/GoBackButton";
 import "../components/ArtistCard.css";
 import BurgerMenu from "../assets/BurgerMenu";
+import Popup from "../components/Popup";
 
 function ArtistSongs({}) {
   const { artistID } = useParams<{ artistID: string }>();

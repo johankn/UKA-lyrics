@@ -89,7 +89,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: rgb(27, 27, 27);
+  color: rgb(193, 45, 45);
   text-align: center;
   display: inline-block;
   padding: 10px 20px; /* Adjust padding as needed */
@@ -105,12 +105,17 @@
   border-radius: 20px; /* Adjust the border radius as needed */
   cursor: pointer;
 }
+
+.low-center-a {
+  color: black;
+}
 .low-center:hover,
 .low-center:focus {
   color: black;
 }
 .arrow-button {
-  background: black;
+  background: #160a59;
+  border: 2px solid #4eb4a0;
   font-size: 2rem;
   cursor: pointer;
   color: white;
@@ -142,9 +147,10 @@
 
 .list-of-songs {
   bottom: 0;
-  width: 100%;
+  width: 94%;
   max-height: 200px;
   overflow-y: scroll;
+
 }
 
 .list-of-songs ol {
@@ -164,5 +170,6 @@
 }
 
 .list-of-songs button:hover {
-  background-color: #4eb4a0;
+  background-color: #e96485;
+  color: white;
 }

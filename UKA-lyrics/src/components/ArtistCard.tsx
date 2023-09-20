@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import BurgerMenu from "../assets/BurgerMenu";
 import GoBackButton from "../assets/GoBackButton";
 import PopUp from "./PopUp";
+import "../index.css"
 
 type Song = {
   id: string;
@@ -128,7 +129,7 @@ const ArtistCard = ({ artistID }: ArtistCardProps) => {
             </div>
           </div>
           <div className="low-center">
-            <a href={song.external_urls.spotify || "#"} target="_blank">
+            <a href={song.external_urls.spotify || "#"} target="_blank" className="low-center-a">
               {song.name}
             </a>
           </div>
@@ -141,6 +142,7 @@ const ArtistCard = ({ artistID }: ArtistCardProps) => {
             →
           </button>
         </div>
+        <h2>Trykk på sangen for å få opp lyrics</h2>
       </div>
       <div className="list-of-songs">
         <ol>

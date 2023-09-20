@@ -89,7 +89,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: rgb(27, 27, 27);
+  color: rgb(193, 45, 45);
   text-align: center;
   display: inline-block;
   padding: 10px 20px; /* Adjust padding as needed */
@@ -104,6 +104,10 @@
   border: none;
   border-radius: 20px; /* Adjust the border radius as needed */
   cursor: pointer;
+}
+
+.low-center-a {
+  color: black;
 }
 .low-center:hover,
 .low-center:focus {
@@ -143,9 +147,10 @@
 
 .list-of-songs {
   bottom: 0;
-  width: 100%;
+  width: 94%;
   max-height: 200px;
   overflow-y: scroll;
+
 }
 
 .list-of-songs ol {

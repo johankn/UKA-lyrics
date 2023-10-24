@@ -28,16 +28,17 @@ test("Content test: HomePage has not changed content", () => {
 
 test("Props test with mocking: FavouriteCard displays the values fetched from localstorage", () => {
   const localStorageParsed = {
-    "60wybNtwQmLvMo27Deve1A": "Rosa sky",
-    "3TetzmUS3NlK6GJrKAgvzc": "Håper du har plass"
+    "60wybNtwQmLvMo27Deve1A": ["Rosa sky", "url1"],
+    "3TetzmUS3NlK6GJrKAgvzc": ["Håper du har plass", "url2"]
 }
   const getMockSongsFromLocalStorage = vi.fn(() => localStorageParsed)
   const favourites = getMockSongsFromLocalStorage()
   render(<div>
-  {Object.entries(favourites).map(([songId, songName], _) => (
+  {Object.entries(favourites).map(([songId, [songName, urlSpotify]], _) => (
       <FavouriteCard
         key={songId}
         songName={songName as string}
+        urlSpotify={urlSpotify as string}
       ></FavouriteCard>
   ))}
 </div>)

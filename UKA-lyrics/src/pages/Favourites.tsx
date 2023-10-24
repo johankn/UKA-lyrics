@@ -7,7 +7,7 @@ import "./Favourites.css";
 import "./HomePage.css";
 
 function Favourites() {
-  const favourites = JSON.parse(localStorage.getItem("favorites") || "{}");
+  const favourites : [string, string[]] = JSON.parse(localStorage.getItem("favorites") || "{}");
   console.log(favourites);
 
   return (
@@ -17,7 +17,7 @@ function Favourites() {
       <div className="main">
         <h1>Dine favoritter</h1>
         <div className="favourites">
-          {Object.entries(favourites).map(([songId, songName], index) => (
+          {Object.entries(favourites).map(([songId, songInfo], index) => (
             <div
               className={
                 index % 2 === 0 ? "pinkFavouritebutton" : "greenFavouritebutton"
@@ -25,7 +25,8 @@ function Favourites() {
             >
               <FavouriteCard
                 key={songId}
-                songName={songName as string}
+                songName={songInfo[0] as string}
+                urlSpotify={songInfo[1] as string}
               ></FavouriteCard>
             </div>
           ))}

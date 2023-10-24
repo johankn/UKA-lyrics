@@ -37,7 +37,7 @@ const ArtistCard = ({ artistID }: ArtistCardProps) => {
   const [currentSongIndex, setCurrentSongIndex] = useState(initialSongIndex);
 
   const [clickedHearts, setClickedHearts] = useState<{
-    [songId: string]: string;
+    [songId: string]: string[];
   }>(JSON.parse(localStorage.getItem("favorites") || "{}"));
 
   const { data: accessToken } = useQuery("spotifyAccessToken", getAccessToken);
@@ -79,7 +79,7 @@ const ArtistCard = ({ artistID }: ArtistCardProps) => {
 
   const isFavorited = Boolean(clickedHearts[song.id]);
 
-  const handleHeartClick = (songId: string, songName: string) => {
+  const handleHeartClick = (songId: string, songName: string, urlSpotify: string) => {
     setClickedHearts((prevClickedHearts) => {
       if (prevClickedHearts[songId]) {
         const newHearts = { ...prevClickedHearts };
@@ -92,7 +92,7 @@ const ArtistCard = ({ artistID }: ArtistCardProps) => {
         setShowPopup(true);
         return {
           ...prevClickedHearts,
-          [songId]: songName,
+          [songId]: [songName, urlSpotify],
         };
       }
     });
@@ -119,7 +119,7 @@ const ArtistCard = ({ artistID }: ArtistCardProps) => {
             />
             <div
               className={`heart ${isFavorited ? "clicked" : ""}`}
-              onClick={() => handleHeartClick(song.id, song.name)}
+              onClick={() => handleHeartClick(song.id, song.name, song.external_urls.spotify)}
             >
               ❤️
             </div>

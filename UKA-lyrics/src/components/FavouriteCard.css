@@ -19,6 +19,7 @@
   border: none;
   width: 100%;
   height: 100%;
+  word-wrap: break-word
 }
 
 .greenFavouritebutton div {
@@ -35,4 +36,5 @@
   border: none;
   width: 100%;
   height: 100%;
+  word-wrap: break-word
 }

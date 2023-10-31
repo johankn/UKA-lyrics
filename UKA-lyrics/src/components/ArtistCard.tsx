@@ -102,7 +102,7 @@ const ArtistCard = ({ artistID }: ArtistCardProps) => {
     <div>
       <div className="">
         <div className="topTen">
-          <h1 className="header">Topp 10 sanger</h1>
+          <h1>Topp 10 sanger</h1>
         </div>
         <div className="container" key={song.id}>
           <button

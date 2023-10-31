@@ -1,9 +1,9 @@
 import { useQuery } from "react-query";
-import { getAccessToken, getTopSongsOfArtist } from "../api/SpotifyAPI.tsx";
+import { getAccessToken, getTopSongsOfArtist } from "../../api/SpotifyAPI.tsx";
 import "./ArtistCard.css";
 import { useEffect, useState } from "react";
-import PopUp from "./PopUp";
-import "../index.css";
+import PopUp from "../PopUp/PopUp.tsx";
+import "../../index.css";
 
 type Song = {
   id: string;

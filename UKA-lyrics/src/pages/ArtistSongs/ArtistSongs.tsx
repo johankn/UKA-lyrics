@@ -1,10 +1,10 @@
 import { QueryClient, QueryClientProvider } from "react-query";
-import ArtistCard from "../components/ArtistCard";
+import ArtistCard from "../../components/ArtistCard/ArtistCard";
 import { useParams } from "react-router-dom";
-import "../index.css";
-import GoBackButton from "../assets/GoBackButton";
-import "../components/ArtistCard.css";
-import BurgerMenu from "../assets/BurgerMenu";
+import "../../index.css";
+import GoBackButton from "../../components/GoBackButton/GoBackButton";
+import "../../components/ArtistCard/ArtistCard.css";
+import BurgerMenu from "../../components/BurgerMenu/BurgerMenu";
 
 function ArtistSongs() {
   const { artistID } = useParams<{ artistID: string }>();

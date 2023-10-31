@@ -1,9 +1,9 @@
-import BurgerMenu from "../assets/BurgerMenu";
-import "./HomePage.css";
-import "../App.css";
-import "../index.css";
+import BurgerMenu from "../../components/BurgerMenu/BurgerMenu";
+import "../HomePage/HomePage.css";
+import "../../App.css";
+import "../../index.css";
 import "./Artists.css";
-import GoBackButton from "../assets/GoBackButton";
+import GoBackButton from "../../components/GoBackButton/GoBackButton";
 
 function Artists() {
   return (

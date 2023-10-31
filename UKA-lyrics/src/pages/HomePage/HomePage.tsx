@@ -1,7 +1,7 @@
 import "./HomePage.css";
-import "../App.css";
-import "../index.css";
-import BurgerMenu from "../assets/BurgerMenu";
+import "../../App.css";
+import "../../index.css";
+import BurgerMenu from "../../components/BurgerMenu/BurgerMenu";
 
 function HomePage() {
   return (

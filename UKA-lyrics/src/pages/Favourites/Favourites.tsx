@@ -1,10 +1,10 @@
-import BurgerMenu from "../assets/BurgerMenu";
-import GoBackButton from "../assets/GoBackButton";
-import FavouriteCard from "../components/FavouriteCard";
-import "../App.css";
-import "../index.css";
+import BurgerMenu from "../../components/BurgerMenu/BurgerMenu";
+import GoBackButton from "../../components/GoBackButton/GoBackButton";
+import FavouriteCard from "../../components/FavouriteCard/FavouriteCard";
+import "../../App.css";
+import "../../index.css";
 import "./Favourites.css";
-import "./HomePage.css";
+import "../HomePage/HomePage.css";
 
 function Favourites() {
   const favourites : [string, string[]] = JSON.parse(localStorage.getItem("favorites") || "{}");

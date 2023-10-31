@@ -1,12 +1,12 @@
-import HomePage from "../src/pages/HomePage";
+import HomePage from "../src/pages/HomePage/HomePage";
 import { expect, test } from "vitest";
 import { render, screen, waitForElementToBeRemoved, act } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { MemoryRouter } from "react-router-dom";
 import "@testing-library/jest-dom";
-import FavouriteCard from "../src/components/FavouriteCard";
+import FavouriteCard from "../src/components/FavouriteCard/FavouriteCard";
 import { vi } from "vitest";
-import ArtistCard from "../src/components/ArtistCard";
+import ArtistCard from "../src/components/ArtistCard/ArtistCard";
 import { QueryClient, QueryClientProvider  } from "react-query";
 
 test("Snapshot test: HomePage has not changed design", () => {

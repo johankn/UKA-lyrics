@@ -1,9 +1,9 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-import HomePage from "./pages/HomePage.tsx";
-import Artists from "./pages/Artists.tsx";
-import ArtistSongs from "./pages/ArtistSongs.tsx";
-import Favourites from "./pages/Favourites.tsx";
+import HomePage from "./pages/HomePage/HomePage.tsx";
+import Artists from "./pages/Artists/Artists.tsx";
+import ArtistSongs from "./pages/ArtistSongs/ArtistSongs.tsx";
+import Favourites from "./pages/Favourites/Favourites.tsx";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 
 import "./index.css";
